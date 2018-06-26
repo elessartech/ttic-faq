@@ -8,13 +8,13 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="../public/css/reset.css"> <!-- CSS reset -->
-    <link rel="stylesheet" href="../public/css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="public/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
 </head>
 <body>
     <header>
     <div class="main_block_nav_container">
-        <h1 class="main_title"><a href="/">PHP FAQ</a></h1>
+        <h1 class="main_title"><a href="/faq-service/">PHP FAQ</a></h1>
         <nav>
             <ul class="main_menu">
                 <li><a href="?/question">Ask a Question</a></li>
