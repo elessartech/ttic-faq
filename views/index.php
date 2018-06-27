@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="public/css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
-	<script src="public/js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="public/js/lib/modernizr.js"></script> <!-- Modernizr -->
 	<title>Main</title>
 </head>
 <body>
@@ -244,11 +244,7 @@
 	<a href="#0" class="cd-close-panel">Close</a>
 </section> <!-- cd-faq -->
 
-
-
-
-<script src="public/js/jquery-2.1.1.js"></script>
-<script src="public/js/jquery.mobile.custom.min.js"></script>
-<script src="public/js/main.js"></script> <!-- Resource jQuery -->
+<script src="public/js/lib/jquery-2.1.1.js"></script>
+<script src="public/js/app.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

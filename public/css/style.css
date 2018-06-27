@@ -692,3 +692,60 @@ header h1 {
   cursor: pointer;
 }
 
+/* Admin Panel section */
+
+.panel_container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+
+.panel_menu {
+    margin-left: 2rem;
+}
+
+.panel_menu ul {
+    margin-top: 1em;
+}
+
+.panel_menu ul li {
+  padding-bottom: 2em;
+  cursor: pointer;
+}
+.panel_menu ul li:last-child {
+  padding-bottom: 0;
+}
+
+.panel_menu ul li a {
+  color: #313841;
+}
+.panel_menu ul li a:hover {
+  color: #a9c056;
+}
+
+.panel_dashboard table {
+  max-width: 960px;
+  margin: 10px auto;
+}
+
+.panel_dashboard_categories th {
+  font-weight: 400;
+  background: #8a97a0;
+  color: #FFF;
+}
+
+.panel_dashboard table tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+.panel_dashboard table tr:nth-child(even) {
+  background: #e8eeef;
+}
+
+.panel_dashboard table th, td {
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+}
