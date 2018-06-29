@@ -14,14 +14,15 @@ class LoginController
 
     public function LoginAction() 
     {
+        $errors = 'Fill the form';
 		$template = $this->twig->loadTemplate('login.php');
-		echo $template->render([]);
+		echo $template->render( ["errors" => $errors] );
     }
 
     public function LoginCheck() 
     {
         $errors = [];
-        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')   
         {
             if (isset($_POST['sign_in']))
             {
@@ -41,9 +42,13 @@ class LoginController
                 }   
                 else
                 {
-                    $errors = array_push($errors, 'Fill all the inputs properly');
+                    $errors = 'Fill all the inputs properly';
                 }
             }
+        }
+        else 
+        {
+            $errors = 'Somenthing went wrong';
         }
     }
 

@@ -25,10 +25,11 @@
     </header>
     <div class="login">
             <h2 class="login-header">Log in</h2>
-            <form action='?/login' class="login-container">
-                <p><input type="text" placeholder="Username"</p>
-                <p><input type="password" placeholder="Password"</p>
-                <p><input type="submit" value="Submit" /></p>
+            <h3 class"login-header">{{ errors }}</h3>
+            <form action='?/login/check' method="POST" class="login-container">
+                <p><input type="text" placeholder="Username" name="login"   /></p>
+                <p><input type="password" placeholder="Password" name="pass"   /></p>
+                <p><input type="submit" value="Submit" name="sign_in" /></p>
             </form>
     </div>
 </body>
