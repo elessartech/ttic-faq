@@ -29,14 +29,14 @@
                 <p><input type="text" placeholder="Username"</p>
                 <p><input type="email" placeholder="Email"</p>
                 <p><select name="categories">
-                    <option value="0">Choose category...</option>
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                    <option value="4"></option>
-                    <option value="5"></option>
-                    <option value="6"></option>
-                    <option value="7"></option>
+                    <option disabled="disabled" selected="selected">Choose category...</option>
+                    <option value="1">First category</option>
+                    <option value="2">Second category</option>
+                    <option value="3">Third category</option>
+                    <option value="4">Forth category</option>
+                    <option value="5">Fifth category</option>
+                    <option value="6">Sixth category</option>
+                    <option value="7">Seventh category</option>
                 </select></p>
                 <p><input type="text" placeholder="Question"</p>
                 <p><input type="submit" value="Submit" /></p>

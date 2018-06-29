@@ -49,7 +49,7 @@
                     <td>
                         <p>sql и database</p>
                         <form action="/admin/change-category" method="POST" class="">
-                            <select name="category_id" class="">
+                            <select name="category_id" class="panel_dashboard_select">
                                 <option value="1">Layout</option>
                                 <option value="2">Javascript</option>
                                 <option value="8">Workflow</option>
@@ -60,14 +60,14 @@
                             <button type="submit" name="change" value="change" class=""></button>
                         </form>
                     </td>
-                    <td class="">
-                        <p class="">Deployed</p>
-                        <p class="">(response given)</p>
+                    <td class="panel_status">
+                        <p>Deployed</p>
+                        <p>(response given)</p>
                     </td>
-                    <td class="">
-                        <p><a href=""><span></span> Delete</a></p>
-                        <p><a href=""><span></span> Edit</a></p>
-                        <p><a href=""><span></span> Take off publication</a></p>
+                    <td class="panel_actions">
+                        <p><a href="" class='panel_actions_del'> Delete</a></p>
+                        <p><a href="" class='panel_actions_edit'> Edit</a></p>
+                        <p><a href="" class='panel_actions_off'> Take off publication</a></p>
                             
                     </td>
                 </tr>

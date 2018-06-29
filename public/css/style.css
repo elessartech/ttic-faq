@@ -698,6 +698,7 @@ header h1 {
     display: flex;
     justify-content: space-around;
     padding-top: 2em;
+    font-size: 1.5em;
 }
 
 .panel_menu {
@@ -748,4 +749,57 @@ header h1 {
   text-align: left;
   padding: 20px;
   font-weight: 300;
+}
+
+.panel_dashboard_select {
+  border-style: solid;
+  margin-top: 1rem;
+  font-size: 0.95em;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 5px;
+  padding-right: 20px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  color: #555;
+}
+
+.panel_status p:first-child {
+  margin-bottom: 1em;
+}
+
+.panel_actions p {
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+.panel_actions p:last-child {
+  margin-bottom: 0;
+}
+
+.panel_actions .panel_actions_del {
+  color: red;
+}
+
+.panel_actions .panel_actions_edit {
+  color: yellow;
+}
+
+.panel_actions .panel_actions_off {
+  color: #a9c056;
 }
