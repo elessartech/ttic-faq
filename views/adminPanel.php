@@ -8,8 +8,10 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="../public/css/reset.css"> <!-- CSS reset -->
-    <link rel="stylesheet" href="../public/css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="public/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -17,15 +19,14 @@
         <h1 class="main_title"><a href="/faq-service/">PHP FAQ</a></h1>
         <nav>
             <ul class="main_menu">
-            <li><a href="?/question">Ask a Question</a></li>
-			<li><a href="?/login">Log In</a></li>
-            </ul>
+                <li><a href="?/login/logout">Log Out</a></li>
         </nav>
     </div>
     </header>
     <div class="panel_container">
         <div class="panel_menu">
             <ul>
+                <li>Welcome {{   session_user  }}!</li>
                 <li><a href="">Questions</a></li>
                 <li><a href="">Admins</a></li>
                 <li><a href="">Categories</a></li>
@@ -48,7 +49,7 @@
                     <td><p>Dick Kennedy (qweewq@gmail.com)</p><p>2018-02-09 17:41:26</p></td>
                     <td>
                         <p>sql и database</p>
-                        <form action="/admin/change-category" method="POST" class="">
+                        <form action="/adminPanel/change-category" method="POST" class="panel_dashboard_form">
                             <select name="category_id" class="panel_dashboard_select">
                                 <option value="1">Layout</option>
                                 <option value="2">Javascript</option>
@@ -57,7 +58,7 @@
                                 <option value="10">back-end</option>
                                 <option value="11">Other Stuff</option>
                             </select>
-                            <button type="submit" name="change" value="change" class=""></button>
+                            <button type="submit" name="change" value="change" class="panel_dashboard_select_sub"><i class="fa fa-check"></i></button>
                         </form>
                     </td>
                     <td class="panel_status">
@@ -65,9 +66,93 @@
                         <p>(response given)</p>
                     </td>
                     <td class="panel_actions">
-                        <p><a href="" class='panel_actions_del'> Delete</a></p>
-                        <p><a href="" class='panel_actions_edit'> Edit</a></p>
-                        <p><a href="" class='panel_actions_off'> Take off publication</a></p>
+                        <p><i class="fa fa-trash"></i><a href="" class='panel_actions_del'> Delete</a></p>
+                        <p><i class="fa fa-pencil"></i><a href=""> Edit</a></p>
+                        <p><i class="fa fa-unlink"></i><a href=""> Take off publication</a></p>
+                            
+                    </td>
+                </tr>
+                <tr>
+                    <td>About null-conclusions in details</td>
+                    <td><p>Dick Kennedy (qweewq@gmail.com)</p><p>2018-02-09 17:41:26</p></td>
+                    <td>
+                        <p>sql и database</p>
+                        <form action="/adminPanel/change-category" method="POST" class="panel_dashboard_form">
+                            <select name="category_id" class="panel_dashboard_select">
+                                <option value="1">Layout</option>
+                                <option value="2">Javascript</option>
+                                <option value="8">Workflow</option>
+                                <option value="9">sql и database</option>
+                                <option value="10">back-end</option>
+                                <option value="11">Other Stuff</option>
+                            </select>
+                            <button type="submit" name="change" value="change" class="panel_dashboard_select_sub"><i class="fa fa-check"></i></button>
+                        </form>
+                    </td>
+                    <td class="panel_status">
+                        <p>Deployed</p>
+                        <p>(response given)</p>
+                    </td>
+                    <td class="panel_actions">
+                        <p><i class="fa fa-trash"></i><a href="" class='panel_actions_del'> Delete</a></p>
+                        <p><i class="fa fa-pencil"></i><a href=""> Edit</a></p>
+                        <p><i class="fa fa-unlink"></i><a href=""> Take off publication</a></p>
+                            
+                    </td>
+                </tr>
+                <tr>
+                    <td>About null-conclusions in details</td>
+                    <td><p>Dick Kennedy (qweewq@gmail.com)</p><p>2018-02-09 17:41:26</p></td>
+                    <td>
+                        <p>sql и database</p>
+                        <form action="/adminPanel/change-category" method="POST" class="panel_dashboard_form">
+                            <select name="category_id" class="panel_dashboard_select">
+                                <option value="1">Layout</option>
+                                <option value="2">Javascript</option>
+                                <option value="8">Workflow</option>
+                                <option value="9">sql и database</option>
+                                <option value="10">back-end</option>
+                                <option value="11">Other Stuff</option>
+                            </select>
+                            <button type="submit" name="change" value="change" class="panel_dashboard_select_sub"><i class="fa fa-check"></i></button>
+                        </form>
+                    </td>
+                    <td class="panel_status">
+                        <p>Deployed</p>
+                        <p>(response given)</p>
+                    </td>
+                    <td class="panel_actions">
+                        <p><i class="fa fa-trash"></i><a href="" class='panel_actions_del'> Delete</a></p>
+                        <p><i class="fa fa-pencil"></i><a href=""> Edit</a></p>
+                        <p><i class="fa fa-unlink"></i><a href=""> Take off publication</a></p>
+                            
+                    </td>
+                </tr>
+                <tr>
+                    <td>About null-conclusions in details</td>
+                    <td><p>Dick Kennedy (qweewq@gmail.com)</p><p>2018-02-09 17:41:26</p></td>
+                    <td>
+                        <p>sql и database</p>
+                        <form action="/adminPanel/change-category" method="POST" class="panel_dashboard_form">
+                            <select name="category_id" class="panel_dashboard_select">
+                                <option value="1">Layout</option>
+                                <option value="2">Javascript</option>
+                                <option value="8">Workflow</option>
+                                <option value="9">sql и database</option>
+                                <option value="10">back-end</option>
+                                <option value="11">Other Stuff</option>
+                            </select>
+                            <button type="submit" name="change" value="change" class="panel_dashboard_select_sub"><i class="fa fa-check"></i></button>
+                        </form>
+                    </td>
+                    <td class="panel_status">
+                        <p>Deployed</p>
+                        <p>(response given)</p>
+                    </td>
+                    <td class="panel_actions">
+                        <p><i class="fa fa-trash"></i><a href="" class='panel_actions_del'> Delete</a></p>
+                        <p><i class="fa fa-pencil"></i><a href=""> Edit</a></p>
+                        <p><i class="fa fa-unlink"></i><a href=""> Take off publication</a></p>
                             
                     </td>
                 </tr>

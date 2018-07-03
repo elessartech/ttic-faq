@@ -14,9 +14,8 @@ class LoginController
 
     public function LoginAction() 
     {
-        $errors = 'Fill the form';
 		$template = $this->twig->loadTemplate('login.php');
-		echo $template->render( ["errors" => $errors] );
+		echo $template->render( [] );
     }
 
     public function LoginCheck() 
@@ -33,22 +32,14 @@ class LoginController
                     if ($this->model->findUser($login, $pass))
                     {
                         $_SESSION['user'] = $login;
-                        header("Location:/admin/questions");
+                        header("Location:/faq-service/?/adminPanel");
                     }
                     else 
                     {
                         header("Location:/login/?error=wrong");
                     }
                 }   
-                else
-                {
-                    $errors = 'Fill all the inputs properly';
-                }
             }
-        }
-        else 
-        {
-            $errors = 'Somenthing went wrong';
         }
     }
 

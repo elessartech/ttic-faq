@@ -1,4 +1,5 @@
 ﻿<?php
+
 class IndexController 
 {
 
@@ -22,7 +23,7 @@ class IndexController
 			$alert = 'Заполните форму, что бы задать вопрос';
 		}
 		$template = $this->twig->loadTemplate('index.php');
-		echo $template->render(['categories'=>$categories, 'questions'=>$array, 'session_user'=>$_SESSION['user'],'alert'=>$alert]);
+		echo $template->render([]);
 	}
 
 	public function actionAdd() 

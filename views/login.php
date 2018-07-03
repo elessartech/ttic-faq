@@ -25,7 +25,6 @@
     </header>
     <div class="login">
             <h2 class="login-header">Log in</h2>
-            <h3 class"login-header">{{ errors }}</h3>
             <form action='?/login/check' method="POST" class="login-container">
                 <p><input type="text" placeholder="Username" name="login"   /></p>
                 <p><input type="password" placeholder="Password" name="pass"   /></p>

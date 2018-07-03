@@ -47,7 +47,7 @@ body.cd-overlay::after {
 }
 
 a {
-  color: #a9c056;
+  color: #4e5359;
   text-decoration: none;
 }
 
@@ -713,6 +713,11 @@ header h1 {
   padding-bottom: 2em;
   cursor: pointer;
 }
+.panel_menu ul li:first-child {
+  cursor: default;
+  margin-bottom: 2em;
+  font-size: 2rem;
+}
 .panel_menu ul li:last-child {
   padding-bottom: 0;
 }
@@ -751,6 +756,10 @@ header h1 {
   font-weight: 300;
 }
 
+.panel_dashboard_form {
+  display: flex;
+}
+
 .panel_dashboard_select {
   border-style: solid;
   margin-top: 1rem;
@@ -780,26 +789,32 @@ header h1 {
   color: #555;
 }
 
+.panel_dashboard_select_sub {
+  width: 50px;
+  height: 20px;
+  margin: 25px 0px 0px 20px;
+}
+
 .panel_status p:first-child {
   margin-bottom: 1em;
 }
 
 .panel_actions p {
   margin-bottom: 1em;
-  font-weight: 400;
+  font-weight: 300;
 }
 .panel_actions p:last-child {
   margin-bottom: 0;
 }
 
-.panel_actions .panel_actions_del {
+.panel_actions .panel_actions_del:hover {
   color: red;
 }
 
-.panel_actions .panel_actions_edit {
+.panel_actions .panel_actions_edit:hover {
   color: yellow;
 }
 
-.panel_actions .panel_actions_off {
+.panel_actions .panel_actions_off:hover {
   color: #a9c056;
 }
