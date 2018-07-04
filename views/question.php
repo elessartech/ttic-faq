@@ -25,21 +25,17 @@
     </header>
     <div class="question">
             <h2 class="question-header">Ask a Question</h2>
-            <form action='' class="question-container">
-                <p><input type="text" placeholder="Username"</p>
-                <p><input type="email" placeholder="Email"</p>
-                <p><select name="categories">
+            <form action='?/question/add' method="POST" class="question-container">
+                <p><input type="text" placeholder="Username" name="question_author"/></p>
+                <p><input type="email" placeholder="Email" name="question_email"/></p>
+                <p><select name="question_category">
                     <option disabled="disabled" selected="selected">Choose category...</option>
-                    <option value="1">First category</option>
-                    <option value="2">Second category</option>
-                    <option value="3">Third category</option>
-                    <option value="4">Forth category</option>
-                    <option value="5">Fifth category</option>
-                    <option value="6">Sixth category</option>
-                    <option value="7">Seventh category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.category }}</option>
+                    {% endfor %}
                 </select></p>
-                <p><input type="text" placeholder="Question"</p>
-                <p><input type="submit" value="Submit" /></p>
+                <p><input type="text" placeholder="Question" name="question_body"/></p>
+                <p><input type="submit" value="Submit" name="question_submit" /></p>
             </form>
     </div>
 </body>

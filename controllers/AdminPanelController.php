@@ -15,7 +15,10 @@ class AdminPanelController
 
     public function AdminPanelAction()
     {
+        $questions = $this->model->getQuestions();
         $template = $this->twig->loadTemplate('adminPanel.php');
-		echo $template->render( ['session_user'=>$_SESSION['user']] );
+		echo $template->render( ['session_user'=>$_SESSION['user'], "questions"=>$questions] );
     }
+
+
 }

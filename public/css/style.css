@@ -724,6 +724,7 @@ header h1 {
 
 .panel_menu ul li a {
   color: #313841;
+  padding-left: 10px;
 }
 .panel_menu ul li a:hover {
   color: #a9c056;
