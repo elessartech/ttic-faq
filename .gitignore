@@ -1,5 +1,5 @@
 # database info
-/config/dbdata.php
+config/dbdata.php
 
 # javascript libraries
-/public/js/lib
+public/js/lib
