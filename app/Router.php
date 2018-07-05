@@ -2,7 +2,7 @@
 
 class Router {
 
-    const DEFAULT_OPTION = 'index';
+    const DEFAULT_OPTION = 'Index';
     const DEFAULT_ACTION = 'Check';
 
     public static function run($db, $Twig)
