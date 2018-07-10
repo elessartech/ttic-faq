@@ -14,7 +14,7 @@
 <body>
     <header>
     <div class="main_block_nav_container">
-        <h1 class="main_title"><a href="/faq-service/">PHP FAQ</a></h1>
+        <h1 class="main_title"><a href="/faq-service/">TTIC FAQ</a></h1>
         <nav>
             <ul class="main_menu">
                 <li><a href="?/question">Ask a Question</a></li>

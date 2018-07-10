@@ -819,3 +819,85 @@ header h1 {
 .panel_actions .panel_actions_off:hover {
   color: #a9c056;
 }
+
+.admins_delete_link:hover {
+  border-bottom: solid 2px #313841;
+}
+
+.old_pass, .new_pass {
+  padding: 7px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  height: 41px;
+  width: 230px;
+  outline: none;
+}
+
+.changepass_submit, .add_categories_submit, .edit_question_submit {
+  min-height: 41px;
+  min-width: 150px;
+  margin-top: 10px;
+  margin-left: 40px;
+  background-color: #a9c056;
+  border: none;
+  border-radius: 6%; 
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+}
+.changepass_submit:hover, .add_categories_submit:hover, .edit_question_submit:hover {
+  background: #42464b;
+  color: #a9c056;
+}
+.changepass_submit:focus, .add_categories_submit:focus, .edit_question_submit:focus {
+  background: #42464b;
+  color: #a9c056;
+}
+
+.add_categories_container {
+  margin-left: 8em;
+}
+
+.add_categories_input {
+  padding: 7px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    height: 41px;
+    width: 230px;
+    outline: none;
+}
+
+.add_categories_submit {
+  margin-left: 20px;
+}
+
+.edit_question_container {
+  margin-top: 1em;
+}
+
+.edit_question_input_div {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.edit_question_input {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 7px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    height: 41px;
+    width: 230px;
+    outline: none;
+}
+
+.edit_question_label {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.edit_question_submit {
+  margin-left: 7em;
+}

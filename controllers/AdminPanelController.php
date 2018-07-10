@@ -15,10 +15,20 @@ class AdminPanelController
 
     public function AdminPanelAction()
     {
-        $questions = $this->model->getQuestions();
+        $categories = $this->model->getCategories();
+        $questions = $this->model->getQuestionsAndCategories();
         $template = $this->twig->loadTemplate('adminPanel.php');
-		echo $template->render( ['session_user'=>$_SESSION['user'], "questions"=>$questions] );
+		echo $template->render( ['session_user'=>$_SESSION['user'], "questions"=>$questions, "categories"=>$categories] );
+    }
+
+    public function AdminPanelDeleteQuestion($id)
+    {
+            $this->model->deleteQuestion($id);
+            echo("<script>location.href = '?/adminPanel';</script>");
     }
 
 
+
 }
+
+?>

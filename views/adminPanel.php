@@ -16,16 +16,16 @@
 <body>
     <header>
     <div class="main_block_nav_container">
-        <h1 class="main_title"><a href="/faq-service/">PHP FAQ</a></h1>
+        <h1 class="main_title"><a href="/faq-service/">TTIC FAQ</a></h1>
     </div>
     </header>
     <div class="panel_container">
         <div class="panel_menu">
             <ul>
                 <li>Welcome {{   session_user  }}!</li>
-                <li><i class="fa fa-question-circle"></i><a href="">Questions</a></li>
-                <li><i class="fa fa-user"></i><a href="">Admins</a></li>
-                <li><i class="fa fa-list-ol"></i><a href="">Categories</a></li>
+                <li><i class="fa fa-question-circle"></i><a href="?/adminPanel">Questions</a></li>
+                <li><i class="fa fa-user"></i><a href="?/adminAdmins">Admins</a></li>
+                <li><i class="fa fa-list-ol"></i><a href="?/adminCategories">Categories</a></li>
                 <li><i class="fa fa-sign-out"></i><a href="?/login/logout">Log Out</a></li>
             </ul>  
         </div>
@@ -46,28 +46,35 @@
                     <td>{{ question.question }}</td>
                     <td><p>{{ question.author }} ({{ question.email }})</p><p>{{ question.date_added }}</p></td>
                     <td>
-                        <p>sql и database</p>
-                        <form action="/adminPanel/change-category" method="POST" class="panel_dashboard_form">
+                        <p>{{ question.category }}</p>
+                        <form action="?/adminPanel/changeCategory" method="POST" class="panel_dashboard_form">
+                            <input type="hidden" name="id" value="{{question.id}}" />
                             <select name="category_id" class="panel_dashboard_select">
-                                <option value="1">Layout</option>
-                                <option value="2">Javascript</option>
-                                <option value="8">Workflow</option>
-                                <option value="9">sql и database</option>
-                                <option value="10">back-end</option>
-                                <option value="11">Other Stuff</option>
+                                {% for category in categories %}
+                                <option value="{{ category.id }}">{{ category.category }}</option>
+                                {% endfor %}
                             </select>
                             <button type="submit" name="change" value="change" class="panel_dashboard_select_sub"><i class="fa fa-check"></i></button>
                         </form>
                     </td>
                     <td class="panel_status">
-                        <p>Deployed</p>
+                    {% if question.answer is null and question.visibility is null %}
+                        <p>Waiting for response</p>
+                        <p>(not publicated)</p>
+                    {% endif %}
+                    {% if question.answer and question.visibility is null %}
+                        <p>Not publicated</p>
                         <p>(response given)</p>
+                    {% endif %}
+                    {% if question.answer and question.visibility %}
+                        <p>Publicated</p>
+                        <p>(response given)</p>
+                    {% endif %}
                     </td>
                     <td class="panel_actions">
-                        <p><i class="fa fa-trash"></i><a href="" class='panel_actions_del'> Delete</a></p>
-                        <p><i class="fa fa-pencil"></i><a href=""> Edit</a></p>
-                        <p><i class="fa fa-unlink"></i><a href=""> Take off publication</a></p>
-                            
+                        <p><i class="fa fa-trash"></i><a href="?/adminPanel/deleteQuestion/{{question.id}}" class='panel_actions_del'> Delete</a></p>
+                        <p><i class="fa fa-pencil"></i><a href="?/adminEditQuestion/editing/{{ question.id }}"> Edit</a></p>
+                        <p><i class="fa fa-unlink"></i><a href="?/adminPanel/takeoffQuestion/{{ question.id }}"> Take off publication</a></p>
                     </td>
                 </tr>
                 {% endfor %}
