@@ -46,7 +46,6 @@ class LoginController
     public function LoginLogout() 
     {
         session_destroy();
-        echo("<script>location.href = '/faq-service/';</script>");
     }
 
 

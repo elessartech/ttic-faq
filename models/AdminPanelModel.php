@@ -40,22 +40,21 @@ class AdminPanelModel
         return $sth->execute();
     }
 
+    public function takeoffPublication($id)
+    {
+        $query = "UPDATE questions SET visibility = NULL WHERE id = ?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $id, PDO::PARAM_STR);
+        return $sth->execute();    
+    }
 
+    public function updateCategory($id, $category_id)
+    {
+        $query = "UPDATE questions SET category_id = ? WHERE id = ?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $category_id, PDO::PARAM_STR);
+        $sth->bindValue(2, $id, PDO::PARAM_INT);
+        return $sth->execute();  
+    }
 
-
-
-    
-
-
-
-
-
-    
-    /*    public function getQuestions() 
-        {
-            $query = "SELECT id, question, author, email, date_added FROM questions";
-            $sth = $this->db->prepare($query); 
-            $sth->execute(); 
-            return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-        }*/
 }

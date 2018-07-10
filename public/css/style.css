@@ -874,7 +874,7 @@ header h1 {
 }
 
 .edit_question_container {
-  margin-top: 1em;
+  height: 850px;
 }
 
 .edit_question_input_div {
@@ -901,3 +901,15 @@ header h1 {
 .edit_question_submit {
   margin-left: 7em;
 }
+
+.edit_question_textarea {
+  height: 220px;
+  width: 410px;
+  margin: 5px 0px;
+  padding: 7px;
+  border-radius: 10px;
+}
+.edit_question_textarea {
+  outline: none;
+}
+

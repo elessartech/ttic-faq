@@ -73,7 +73,7 @@
                     </td>
                     <td class="panel_actions">
                         <p><i class="fa fa-trash"></i><a href="?/adminPanel/deleteQuestion/{{question.id}}" class='panel_actions_del'> Delete</a></p>
-                        <p><i class="fa fa-pencil"></i><a href="?/adminEditQuestion/editing/{{ question.id }}"> Edit</a></p>
+                        <p><i class="fa fa-pencil"></i><a href="?/adminEditQuestion/{{ question.id }}"> Edit</a></p>
                         <p><i class="fa fa-unlink"></i><a href="?/adminPanel/takeoffQuestion/{{ question.id }}"> Take off publication</a></p>
                     </td>
                 </tr>

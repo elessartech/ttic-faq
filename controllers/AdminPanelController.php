@@ -23,11 +23,29 @@ class AdminPanelController
 
     public function AdminPanelDeleteQuestion($id)
     {
-            $this->model->deleteQuestion($id);
-            echo("<script>location.href = '?/adminPanel';</script>");
+        $this->model->deleteQuestion($id);
+        echo("<script>location.href = '?/adminPanel';</script>");
     }
 
+    public function AdminPanelTakeoffQuestion($id)
+    {
+        $this->model->takeoffPublication($id);
+        echo("<script>location.href = '?/adminPanel';</script>");
+    }
 
+    public function AdminPanelChangeCategory()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            if (isset($_POST['change']) && isset($_POST['category_id']) && isset($_POST['id']))
+            {
+                $id = $_POST['id'];
+                $category = trim(strip_tags($_POST['category_id']));
+                $this->model->updateCategory($id, $category);
+                echo("<script>location.href = '?/adminPanel';</script>");
+            }
+        }
+    }
 
 }
 

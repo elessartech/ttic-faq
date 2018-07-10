@@ -30,28 +30,30 @@
             </ul>  
         </div>
         <div class="edit_question_container">
-        <form action="?/adminEditQuestion/editQuestion" method="POST" class="">
-				<input type="hidden" name="id" value="60">
+        {% for question in question_info %}
+        <form action="?/adminEditQuestion/check/{{ question.id }}" method="POST" class="">
+				<input type="hidden" name="id" value="{{ question.id }}">
 				<label class="edit_question_label">Question: </label>
             <div class="edit_question_input_div">
-                <input type="text" name="question" value="Еще о NULL-значениях" class="edit_question_input">
+                <input type="text" name="question" value="{{ question.question }}" class="edit_question_input">
             </div>
 				<label class="edit_question_label">Author: </label>
             <div class="edit_question_input_div">
-                <input type="text" name="author" value="Дэн Кеннеди" class="edit_question_input">
+                <input type="text" name="author" value="{{ question.author }}" class="edit_question_input">
             </div>
 				<label class="edit_question_label">Email: </label>
             <div class="edit_question_input_div">
-                <input type="text" name="email" value="qweewq@gmail.com" class="edit_question_input">
+                <input type="text" name="email" value="{{ question.email }}" class="edit_question_input">
             </div>
 				<label class="edit_question_label">Answer: </label>
             <div class="edit_question_input_div">
-                <textarea rows="10" cols="45" name="answer" class="">Смысл NULL-значения — это отсутствие информации или неприменимость данного атрибута в данном кортеже.</textarea>
+                <textarea rows="10" cols="45" name="answer" class="edit_question_textarea">{{ question.answer }}</textarea>
             </div><br>
 				<input type="radio" name="visibility" value="1" class=""> Publicate the question  <br><br>
 				<input type="radio" name="visibility" value="NULL" class=""> No publication<br><br>
 				<input type="submit" name="update" value="Update" class="edit_question_submit">
 			</form>
+        {% endfor %}
         </div>
 </body>
 </html>

@@ -19,7 +19,9 @@ class Router {
         else if (count($url) > 1) $route['controller'] = $url[1];
 
         $controllerName = ucfirst($route['controller']);
-        if ($controllerName != 'AdminEditQuestion') $specificActionName = $controllerName . ucfirst($route['action']);
+
+        $specificActionName = $controllerName . ucfirst($route['action']);
+
 
         $controllerClass = $controllerName . 'Controller';
         $controllerPath = 'controllers/' . $controllerClass . '.php';
@@ -34,9 +36,23 @@ class Router {
         $actionName = $controllerName . 'Action';
 		
         if (!method_exists($controllerObject, $actionName)) throw new Exception("No action! " . $controllerName);
-        $controllerObject->$actionName();
+        
+        if ($controllerName == 'AdminEditQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET') 
+        {
+            $route['id'] = $url[3];
+            $controllerObject->$actionName($route['id']);
+            return false;
+        } 
+        elseif ($controllerName == 'AdminEditQuestion' && $_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $controllerObject->$actionName($route['id']);
+        }
+        else
+        {
+            $controllerObject->$actionName();
+        }
 
-        if (isset($route['action']) && $controllerName != Router::DEFAULT_OPTION && strlen($route['id']) < 1 && $controllerName != 'AdminEditQuestion') 
+        if (isset($route['action']) && $controllerName != Router::DEFAULT_OPTION && strlen($route['id']) < 1) 
         {
             $controllerObject->$specificActionName();
         }
