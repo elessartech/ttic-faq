@@ -31,7 +31,7 @@ class AdminCategoriesModel
 		return $sth->fetchAll(PDO::FETCH_ASSOC);
 	}*/
 
-	public function delete($id) 
+	public function deleteCategory($id) 
 	{
 		$query = "DELETE FROM categories WHERE id = ?; DELETE FROM questions WHERE category_id = ?";
 		$sth = $this->db->prepare($query);
@@ -40,19 +40,19 @@ class AdminCategoriesModel
 		return $sth->execute();
 	}
 
-	public function create($name) 
+	public function createCategory($category) 
 	{
 		$query = "INSERT INTO categories (category) VALUES (?)";
 		$sth = $this->db->prepare($query);
-		$sth->bindValue(1, $name, PDO::PARAM_STR);
+		$sth->bindValue(1, $category, PDO::PARAM_STR);
 		return $sth->execute();
     }
     
-	public function update($id, $name) 
+	public function updateCategory($id, $category) 
 	{
 		$query = "UPDATE categories SET category = ? WHERE id = ?";
 		$sth = $this->db->prepare($query);
-		$sth->bindValue(1, $name, PDO::PARAM_STR);
+		$sth->bindValue(1, $category, PDO::PARAM_STR);
 		$sth->bindValue(2, $id, PDO::PARAM_INT);
 		return $sth->execute();
     }

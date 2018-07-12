@@ -24,6 +24,7 @@
 			{% else %}
 				<li><a href="?/question">Ask a Question</a></li>
 				<li><a href="?/login">Log In</a></li>
+				<li><a href="?/register">Sign Up</a></li>
 			{% endif %}
 		</ul>
 	</nav>

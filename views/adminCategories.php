@@ -47,13 +47,13 @@
                 <tr>
                     <td>{{category.category}}</td>
                     <td>
-                    <p><a href="/?adminAdmins/deleteCategory/{{category.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
+                    <p><a href="?/adminCategories/deleteCategory/{{category.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
                     </td>
                     <td>
                     <form action="?/adminCategories/changeTitle" method="POST">
 									<input type="hidden" name="id" value="{{category.id}}">
 									<div>
-										<input type="text" name="new" placeholder="New category name" class="new_pass">
+										<input type="text" name="new_title" placeholder="New category name" class="new_pass">
 									</div>
 									    <input type="submit" name="changepassword" value="Change" class="changepass_submit">	
 								</form>
