@@ -611,6 +611,16 @@ header h1 {
   cursor: pointer;
 }
 
+.login_as_admin {
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.login_as_admin a span {
+  color: #a9c056;
+}
+
 /* End of Login section */
 
 
@@ -731,7 +741,7 @@ header h1 {
 }
 
 .panel_dashboard table {
-  max-width: 960px;
+  max-width: 1250px;
   margin: 10px auto;
 }
 
@@ -822,6 +832,7 @@ header h1 {
 
 .admins_delete_link:hover {
   border-bottom: solid 2px #313841;
+  cursor: pointer;
 }
 
 .old_pass, .new_pass {
@@ -913,3 +924,15 @@ header h1 {
   outline: none;
 }
 
+.users_button_make_admin {
+  background:none!important;
+  border:none; 
+  padding:0!important;
+  font-size: 1em;
+  color: #4e5359;
+  font-weight: 300;
+  font-family: 'Open sans';
+}
+.users_button_make_admin:hover {
+  cursor: pointer;
+}

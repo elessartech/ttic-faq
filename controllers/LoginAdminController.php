@@ -1,7 +1,6 @@
 <?php 
 
-
-class LoginController 
+class LoginAdminController
 {
 
     public function __construct($db, $Twig)
@@ -9,16 +8,15 @@ class LoginController
         include 'models/LoginModel.php';
         $this->model = new LoginModel($db);
         $this->twig = $Twig;
-
     }
 
-    public function LoginAction() 
+    public function LoginAdminAction()
     {
-		$template = $this->twig->loadTemplate('login.php');
-		echo $template->render( [] );
+        $template = $this->twig->loadTemplate('loginAdmin.php');
+		echo $template->render([]);
     }
 
-    public function LoginCheck() 
+    public function LoginAdminCheck() 
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] == 'POST')   
@@ -29,9 +27,9 @@ class LoginController
                 {
                     $login = trim(strip_tags($_POST['login']));
                     $pass = md5(trim(strip_tags($_POST['pass'])));
-                    if ($this->model->findUser($login, $pass))
+                    if ($this->model->findAdmin($login, $pass))
                     {
-                        $_SESSION['user'] = $login;
+                        $_SESSION['admin'] = $login;
                         header("Location:/faq-service/?/panel");
                     }
                     else 
@@ -42,11 +40,5 @@ class LoginController
             }
         }
     }
-
-    public function LoginLogout() 
-    {
-        session_destroy();
-    }
-
 
 }

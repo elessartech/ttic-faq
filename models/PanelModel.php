@@ -1,7 +1,7 @@
 <?php
 
 
-class AdminPanelModel
+class PanelModel
 {
 
     public $db = null;

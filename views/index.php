@@ -20,7 +20,7 @@
 	<nav>
 		<ul class="main_menu">
 			{% if session_user %}
-				<li><a href="?/adminPanel">You logged in as {{session_user}}</a></li>
+				<li><a href="?/panel">Panel {{session_user}}</a></li>
 			{% else %}
 				<li><a href="?/question">Ask a Question</a></li>
 				<li><a href="?/login">Log In</a></li>

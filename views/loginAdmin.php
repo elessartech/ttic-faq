@@ -25,12 +25,11 @@
     </div>
     </header>
     <div class="login">
-            <h2 class="login-header">Log in</h2>
-            <form action='?/login/check' method="POST" class="login-container">
+            <h2 class="login-header">Log in as admin</h2>
+            <form action='?/loginAdmin/check' method="POST" class="login-container">
                 <p><input type="text" placeholder="Username" name="login"   /></p>
                 <p><input type="password" placeholder="Password" name="pass"   /></p>
                 <p><input type="submit" value="Submit" name="sign_in" /></p>
-                <p class="login_as_admin">Log in as <a href="?/loginAdmin"><span>admin</span></a>?</p>
             </form>
     </div>
 </body>

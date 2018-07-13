@@ -23,9 +23,10 @@
         <div class="panel_menu">
             <ul>
                 <li>Welcome {{   session_user  }}!</li>
-                <li><i class="fa fa-question-circle"></i><a href="?/adminPanel">Questions</a></li>
-                <li><i class="fa fa-user"></i><a href="?/adminAdmins">Admins</a></li>
-                <li><i class="fa fa-list-ol"></i><a style="padding-left: 5px;" href="?/adminCategories">Categories</a></li>
+                <li><i class="fa fa-question-circle"></i><a href="?/panel">Questions</a></li>
+                <li><i class="fa fa-user"></i><a href="?/admins">Admins</a></li>
+                <li><i class="fa fa-users"></i><a href="?/users">Users</a></li>
+                <li><i class="fa fa-list-ol"></i><a style="padding-left: 5px;" href="?/categories">Categories</a></li>
                 <li><i class="fa fa-sign-out"></i><a href="?/login/logout">Log Out</a></li>
             </ul>  
         </div>
@@ -45,10 +46,10 @@
                     <td>{{admin.id}}</td>
                     <td><p>{{admin.login}}</p></td>
                     <td>
-                    <p><a href="?/adminAdmins/deleteUser/{{admin.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
+                    <p><a href="?/admins/deleteUser/{{admin.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
                     </td>
                     <td>
-                    <form action="?/admin/change-password" method="POST">
+                    <form action="?/admins/change-password" method="POST">
 									<input type="hidden" name="id" value="{{admin.id}}">
 									<input type="hidden" name="login" value="{{admin.login}}">
 									<div>

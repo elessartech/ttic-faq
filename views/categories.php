@@ -23,14 +23,15 @@
         <div class="panel_menu">
             <ul>
                 <li>Welcome {{   session_user  }}!</li>
-                <li><i class="fa fa-question-circle"></i><a href="?/adminPanel">Questions</a></li>
-                <li><i class="fa fa-user"></i><a href="?/adminAdmins">Admins</a></li>
-                <li><i class="fa fa-list-ol"></i><a href="?/adminCategories">Categories</a></li>
+                <li><i class="fa fa-question-circle"></i><a href="?/panel">Questions</a></li>
+                <li><i class="fa fa-user"></i><a href="?/admins">Admins</a></li>
+                <li><i class="fa fa-users"></i><a href="?/users">Users</a></li>
+                <li><i class="fa fa-list-ol"></i><a style="padding-left: 5px;" href="?/categories">Categories</a></li>
                 <li><i class="fa fa-sign-out"></i><a href="?/login/logout">Log Out</a></li>
             </ul>  
         </div>
         <div class="panel_dashboard">
-            <form class="add_categories_container" method="POST" action="?/adminCategories/addCategory">
+            <form class="add_categories_container" method="POST" action="?/categories/addCategory">
                 <input type="text" name="new_category" placeholder="Add category" class="add_categories_input">
                 <input type="submit" name="new_category_submit" value="Add" class="add_categories_submit">
             </form>
@@ -47,10 +48,10 @@
                 <tr>
                     <td>{{category.category}}</td>
                     <td>
-                    <p><a href="?/adminCategories/deleteCategory/{{category.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
+                    <p><a href="?/categories/deleteCategory/{{category.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
                     </td>
                     <td>
-                    <form action="?/adminCategories/changeTitle" method="POST">
+                    <form action="?/categories/changeTitle" method="POST">
 									<input type="hidden" name="id" value="{{category.id}}">
 									<div>
 										<input type="text" name="new_title" placeholder="New category name" class="new_pass">

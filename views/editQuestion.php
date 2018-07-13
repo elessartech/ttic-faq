@@ -23,15 +23,16 @@
         <div class="panel_menu">
             <ul>
                 <li>Welcome {{   session_user  }}!</li>
-                <li><i class="fa fa-question-circle"></i><a href="?/adminPanel">Questions</a></li>
-                <li><i class="fa fa-user"></i><a href="?/adminAdmins">Admins</a></li>
-                <li><i class="fa fa-list-ol"></i><a href="?/adminCategories">Categories</a></li>
+                <li><i class="fa fa-question-circle"></i><a href="?/panel">Questions</a></li>
+                <li><i class="fa fa-user"></i><a href="?/admins">Admins</a></li>
+                <li><i class="fa fa-users"></i><a href="?/users">Users</a></li>
+                <li><i class="fa fa-list-ol"></i><a style="padding-left: 5px;" href="?/categories">Categories</a></li>
                 <li><i class="fa fa-sign-out"></i><a href="?/login/logout">Log Out</a></li>
             </ul>  
         </div>
         <div class="edit_question_container">
         {% for question in question_info %}
-        <form action="?/adminEditQuestion/check/{{ question.id }}" method="POST" class="">
+        <form action="?/editQuestion/check/{{ question.id }}" method="POST" class="">
 				<input type="hidden" name="id" value="{{ question.id }}">
 				<label class="edit_question_label">Question: </label>
             <div class="edit_question_input_div">

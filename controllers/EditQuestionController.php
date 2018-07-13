@@ -1,24 +1,24 @@
 <?php
 
 
-class AdminEditQuestionController
+class EditQuestionController
 {
 
 public function __construct($db, $Twig)
 {
-    include 'models/AdminEditQuestionModel.php';
-    $this->model = new AdminEditQuestionModel($db);
+    include 'models/EditQuestionModel.php';
+    $this->model = new EditQuestionModel($db);
     $this->twig = $Twig;
 }
 
-public function AdminEditQuestionAction($id)
+public function EditQuestionAction($id)
 {
     $question_info = $this->model->getQuestion($id);
-    $template = $this->twig->loadTemplate('adminEditQuestion.php');
+    $template = $this->twig->loadTemplate('editQuestion.php');
 	echo $template->render( ['session_user'=>$_SESSION['user'], 'question_info'=>$question_info] );
 }
 
-public function AdminEditQuestionCheck()
+public function EditQuestionCheck()
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -33,11 +33,11 @@ public function AdminEditQuestionCheck()
             if ($visibility ==  '1')
             {
                 $this->model->updatePublic($id, $question, $author, $email, $answer);
-                echo("<script>location.href = '?/adminPanel';</script>");
+                echo("<script>location.href = '?/panel';</script>");
             }
             else {
                 $this->model->update($id, $question, $author, $email, $answer);
-                echo("<script>location.href = '?/adminPanel';</script>");
+                echo("<script>location.href = '?/panel';</script>");
             }
         }
     }

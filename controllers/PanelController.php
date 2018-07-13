@@ -1,39 +1,39 @@
 <?php
 
-class AdminPanelController 
+class PanelController 
 {
 
     public $model = null;
 
     public function __construct($db, $Twig) 
     {
-        include_once 'models/AdminPanelModel.php';
-        $this->model = new AdminPanelModel($db);
+        include_once 'models/PanelModel.php';
+        $this->model = new PanelModel($db);
         $this->twig = $Twig;
     }
 
 
-    public function AdminPanelAction()
+    public function PanelAction()
     {
         $categories = $this->model->getCategories();
         $questions = $this->model->getQuestionsAndCategories();
-        $template = $this->twig->loadTemplate('adminPanel.php');
+        $template = $this->twig->loadTemplate('panel.php');
 		echo $template->render( ['session_user'=>$_SESSION['user'], "questions"=>$questions, "categories"=>$categories] );
     }
 
-    public function AdminPanelDeleteQuestion($id)
+    public function PanelDeleteQuestion($id)
     {
         $this->model->deleteQuestion($id);
-        echo("<script>location.href = '?/adminPanel';</script>");
+        echo("<script>location.href = '?/panel';</script>");
     }
 
-    public function AdminPanelTakeoffQuestion($id)
+    public function PanelTakeoffQuestion($id)
     {
         $this->model->takeoffPublication($id);
-        echo("<script>location.href = '?/adminPanel';</script>");
+        echo("<script>location.href = '?/panel';</script>");
     }
 
-    public function AdminPanelChangeCategory()
+    public function PanelChangeCategory()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
@@ -42,7 +42,7 @@ class AdminPanelController
                 $id = $_POST['id'];
                 $category = trim(strip_tags($_POST['category_id']));
                 $this->model->updateCategory($id, $category);
-                echo("<script>location.href = '?/adminPanel';</script>");
+                echo("<script>location.href = '?/panel';</script>");
             }
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-class AdminEditQuestionModel
+class EditQuestionModel
 {
 
     public $db = null;

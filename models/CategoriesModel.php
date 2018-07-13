@@ -1,6 +1,6 @@
 <?php
   
-class AdminCategoriesModel
+class CategoriesModel
 {
 
     public $dbname = null;

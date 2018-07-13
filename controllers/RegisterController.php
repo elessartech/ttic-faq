@@ -6,7 +6,7 @@ class RegisterController
     public function __construct($db, $Twig)
     {
         include 'models/RegisterModel.php';
-        $this->model = $db;
+        $this->model = new RegisterModel($db);
         $this->twig = $Twig;
     }
 
@@ -16,7 +16,7 @@ class RegisterController
 		echo $template->render( [] );
     }
 
-    public function ResgisterCheck()
+    public function RegisterCheck()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST')   
         {
@@ -27,15 +27,17 @@ class RegisterController
                     if ($_POST['pass'] == $_POST['pass_2']) 
                     {
                         $login = trim(strip_tags($_POST['login']));
+                        $email = trim(strip_tags($_POST['email']));
                         $pass = md5(trim(strip_tags($_POST['pass'])));
                         if ($this->model->isUser($login))
                         {
-                            $_SESSION['user'] = $login;
-                            header("Location:/faq-service/?/adminPanel");
+                            header("Location:/login/?error=wrong");
                         }
                         else 
                         {
-                            header("Location:/login/?error=wrong");
+                            $this->model->registerUser($email, $login, $pass);
+                            $_SESSION['user'] = $login;
+                            header("Location:/faq-service/?/panel");
                         }
                     }
                 }   

@@ -37,13 +37,13 @@ class Router {
 		
         if (!method_exists($controllerObject, $actionName)) throw new Exception("No action! " . $controllerName);
         
-        if ($controllerName == 'AdminEditQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET') 
+        if ($controllerName == 'EditQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET') 
         {
             $route['id'] = $url[3];
             $controllerObject->$actionName($route['id']);
             return false;
         } 
-        elseif ($controllerName == 'AdminEditQuestion' && $_SERVER['REQUEST_METHOD'] == 'POST')
+        elseif ($controllerName == 'EditQuestion' && $_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $controllerObject->$actionName($route['id']);
         }

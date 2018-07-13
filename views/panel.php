@@ -23,9 +23,10 @@
         <div class="panel_menu">
             <ul>
                 <li>Welcome {{   session_user  }}!</li>
-                <li><i class="fa fa-question-circle"></i><a href="?/adminPanel">Questions</a></li>
-                <li><i class="fa fa-user"></i><a href="?/adminAdmins">Admins</a></li>
-                <li><i class="fa fa-list-ol"></i><a href="?/adminCategories">Categories</a></li>
+                <li><i class="fa fa-question-circle"></i><a href="?/panel">Questions</a></li>
+                <li><i class="fa fa-user"></i><a href="?/admins">Admins</a></li>
+                <li><i class="fa fa-users"></i><a href="?/users">Users</a></li>
+                <li><i class="fa fa-list-ol"></i><a style="padding-left: 5px;" href="?/categories">Categories</a></li>
                 <li><i class="fa fa-sign-out"></i><a href="?/login/logout">Log Out</a></li>
             </ul>  
         </div>
@@ -47,7 +48,7 @@
                     <td><p>{{ question.author }} ({{ question.email }})</p><p>{{ question.date_added }}</p></td>
                     <td>
                         <p>{{ question.category }}</p>
-                        <form action="?/adminPanel/changeCategory" method="POST" class="panel_dashboard_form">
+                        <form action="?/panel/changeCategory" method="POST" class="panel_dashboard_form">
                             <input type="hidden" name="id" value="{{question.id}}" />
                             <select name="category_id" class="panel_dashboard_select">
                                 {% for category in categories %}
@@ -72,9 +73,9 @@
                     {% endif %}
                     </td>
                     <td class="panel_actions">
-                        <p><i class="fa fa-trash"></i><a href="?/adminPanel/deleteQuestion/{{question.id}}" class='panel_actions_del'> Delete</a></p>
-                        <p><i class="fa fa-pencil"></i><a href="?/adminEditQuestion/{{ question.id }}"> Edit</a></p>
-                        <p><i class="fa fa-unlink"></i><a href="?/adminPanel/takeoffQuestion/{{ question.id }}"> Take off publication</a></p>
+                        <p><i class="fa fa-trash"></i><a href="?/panel/deleteQuestion/{{question.id}}" class='panel_actions_del'> Delete</a></p>
+                        <p><i class="fa fa-pencil"></i><a href="?/editQuestion/{{ question.id }}"> Edit</a></p>
+                        <p><i class="fa fa-unlink"></i><a href="?/panel/takeoffQuestion/{{ question.id }}"> Take off publication</a></p>
                     </td>
                 </tr>
                 {% endfor %}
