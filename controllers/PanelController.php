@@ -17,8 +17,15 @@ class PanelController
     {
         $categories = $this->model->getCategories();
         $questions = $this->model->getQuestionsAndCategories();
-        $template = $this->twig->loadTemplate('panel.php');
-		echo $template->render( ['session_user'=>$_SESSION['user'], "questions"=>$questions, "categories"=>$categories] );
+        if (isset($_SESSION['admin']))
+        {
+            $template = $this->twig->loadTemplate('adminMode/panel.php');
+        }
+        else
+        {
+            $template = $this->twig->loadTemplate('userMode/panel.php');
+        }
+		echo $template->render( ['session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin'], "questions"=>$questions, "categories"=>$categories] );
     }
 
     public function PanelDeleteQuestion($id)

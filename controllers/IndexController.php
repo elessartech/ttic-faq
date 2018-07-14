@@ -19,7 +19,7 @@ class IndexController
 			$array[$category['category']]=$this->model->getQuestionsByCat($category['category']);
 		}
 		$template = $this->twig->loadTemplate('index.php');
-		echo $template->render(['questions'=>$array, 'categories'=>$categories, 'session_user'=>$_SESSION['user']]);
+		echo $template->render(['questions'=>$array, 'categories'=>$categories, 'session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin']]);
 	}
 
 

@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
 	<script src="public/js/lib/modernizr.js"></script> <!-- Modernizr -->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
 	
 	<title>Main</title>
 </head>
@@ -19,8 +20,10 @@
 	<h1 class="main_title"><a href="/faq-service">TTIC FAQ</a></h1>
 	<nav>
 		<ul class="main_menu">
-			{% if session_user %}
-				<li><a href="?/panel">Panel {{session_user}}</a></li>
+			{% if session_admin %}
+			<li><a href="?/panel"> <i style="color: #fff; margin-right: 7px;" class="fa fa-user"></i>Admin Panel</a></li>
+			{% elseif session_user %}
+			<li><a href="?/panel"><i style="color: #fff; margin-right: 7px;" class="fa fa-user"></i>User Panel</a></li>
 			{% else %}
 				<li><a href="?/question">Ask a Question</a></li>
 				<li><a href="?/login">Log In</a></li>

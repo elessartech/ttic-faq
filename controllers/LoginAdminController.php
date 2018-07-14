@@ -18,7 +18,6 @@ class LoginAdminController
 
     public function LoginAdminCheck() 
     {
-        $errors = [];
         if ($_SERVER['REQUEST_METHOD'] == 'POST')   
         {
             if (isset($_POST['sign_in']))

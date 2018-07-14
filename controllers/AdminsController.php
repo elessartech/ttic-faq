@@ -13,8 +13,8 @@ class AdminsController
     public function AdminsAction()
     {
         $admins = $this->model->getAdmins();
-        $template = $this->twig->loadTemplate('admins.php');
-		echo $template->render( ['session_user'=>$_SESSION['user'], 'admins'=>$admins] );
+        $template = $this->twig->loadTemplate('adminMode/admins.php');
+		echo $template->render( ['session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin'], 'admins'=>$admins] );
     }
 
     public function AdminsDeleteUser($id)

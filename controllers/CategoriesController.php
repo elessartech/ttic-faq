@@ -13,8 +13,8 @@ class CategoriesController
     public function CategoriesAction()
     {
         $categories = $this->model->getQuestionCategories();
-        $template = $this->twig->loadTemplate('categories.php');
-		echo $template->render( ['session_user'=>$_SESSION['user'], 'categories'=>$categories] );
+        $template = $this->twig->loadTemplate('adminMode/categories.php');
+		echo $template->render( ['session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin'], 'categories'=>$categories] );
     }
 
     public function CategoriesAddCategory()

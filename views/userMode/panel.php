@@ -1,0 +1,26 @@
+{% extends 'userTemplate.php' %}
+{% block title %}
+	<title>User Panel</title>
+{% endblock %}
+{% block child %}
+            <table>
+                <thead class="panel_dashboard_categories">
+                <tr>
+                        <td>Question</td>
+                        <td>Author and date</td>
+                        <td>Solution</td>
+                </tr>
+                </thead>
+                <tbody class="panel_dashboard_cell">
+                {% for question in questions %}
+                <tr>
+                    <td>{{ question.question }}</td>
+                    <td><p>{{ question.author }} ({{ question.email }})</p><p>{{ question.date_added }}</p></td>
+                    <td>
+                    <p><i class="fa fa-comment"></i><a class="admins_delete_link" href="?/answerQuestion/{{ question.id }}"> Answer</a></p>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+        </table>
+        {% endblock %}

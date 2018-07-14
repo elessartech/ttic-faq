@@ -14,8 +14,15 @@ class UsersController
     public function UsersAction()
     {
         $users = $this->model->getUsers();
-        $template = $this->twig->loadTemplate('users.php');
-		echo $template->render( ['session_user'=>$_SESSION['user'], 'users'=>$users] );
+        if (isset($_SESSION['admin']))
+        {
+            $template = $this->twig->loadTemplate('adminMode/users.php');
+        }
+        else
+        {
+            $template = $this->twig->loadTemplate('userMode/users.php');
+        }
+		echo $template->render( ['session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin'], 'users'=>$users] );
     }
 
     public function UsersDeleteUser($id)

@@ -6,16 +6,16 @@ class EditQuestionController
 
 public function __construct($db, $Twig)
 {
-    include 'models/EditQuestionModel.php';
-    $this->model = new EditQuestionModel($db);
+    include 'models/QuestionModel.php';
+    $this->model = new QuestionModel($db);
     $this->twig = $Twig;
 }
 
 public function EditQuestionAction($id)
 {
     $question_info = $this->model->getQuestion($id);
-    $template = $this->twig->loadTemplate('editQuestion.php');
-	echo $template->render( ['session_user'=>$_SESSION['user'], 'question_info'=>$question_info] );
+    $template = $this->twig->loadTemplate('adminMode/editQuestion.php');
+	echo $template->render( ['session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin'], 'question_info'=>$question_info] );
 }
 
 public function EditQuestionCheck()
