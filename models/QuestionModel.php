@@ -9,6 +9,15 @@ class QuestionModel
         $this->db = $dbname;
     }
 
+    public function getEmailByUsername($username)
+    {
+        $query = "SELECT id, email FROM users WHERE login=?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $username, PDO::PARAM_STR);
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_ASSOC); 
+    }
+
     public function getQuestionCategories() 
 	{
 		$query = "SELECT id, category FROM categories";
@@ -59,6 +68,18 @@ class QuestionModel
         $sth->bindValue(4, $answer, PDO::PARAM_STR);
         $sth->bindValue(5, $id, PDO::PARAM_INT);
         return $sth->execute(); 
+    }
+
+    public function makeSuggestion($id, $username, $question, $suggestion, $email)
+    {
+        $query = "INSERT INTO suggestions (id, username, question, suggestion, date, email) VALUES (?, ?, ?, ?, now(), ?)";
+		$sth = $this->db->prepare($query); 
+		$sth->bindValue(1, $id, PDO::PARAM_INT);
+		$sth->bindValue(2, $username, PDO::PARAM_STR);
+		$sth->bindValue(3, $question, PDO::PARAM_STR);
+        $sth->bindValue(4, $suggestion, PDO::PARAM_STR);
+        $sth->bindValue(5, $email, PDO::PARAM_STR);
+		return $sth->execute(); 
     }
 
 }

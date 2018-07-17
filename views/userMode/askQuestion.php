@@ -5,7 +5,8 @@
 {% block child %}
     <div class="ask_question">
             <h2 class="question-header">Ask a Question</h2>
-            <form action='?/question/add' method="POST" class="question-container">
+            <form action='?/askQuestion/add' method="POST" class="question-container">
+            <input type="hidden" name="question_author" value="{{ session_user }}">
                 <p><select name="question_category">
                     <option disabled="disabled" selected="selected">Choose category...</option>
                     {% for category in categories %}
