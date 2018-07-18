@@ -3,6 +3,11 @@
 	<title>Admin Panel</title>
 {% endblock %}
 {% block child %}
+{% if questions is empty %}
+    <p>
+        No questions!
+    </p>
+{% else %}
             <table>
                 <thead class="panel_dashboard_categories">
                 <tr>
@@ -47,10 +52,16 @@
                     <td class="panel_actions">
                         <p><i class="fa fa-trash"></i><a href="?/panel/deleteQuestion/{{question.id}}" class='panel_actions_del'> Delete</a></p>
                         <p><i class="fa fa-pencil"></i><a href="?/editQuestion/{{ question.id }}"> Edit</a></p>
-                        <p><i class="fa fa-unlink"></i><a href="?/panel/takeoffQuestion/{{ question.id }}"> Take off publication</a></p>
+                        {% if question.visibility %}
+                        <p><i class="fa fa-unlink"></i><a href="?/panel/takeoffQuestion/{{ question.id }}"> Take off publication</a></p>                            
+                        {% endif %}
+                        {% if question.visibility is null %}
+                        <p><i class="fa fa-link"></i><a href="?/panel/publicateQuestion/{{ question.id }}"> Publish question</a></p>
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}
                 </tbody>
         </table>
-        {% endblock %}
+    {% endif %}
+{% endblock %}

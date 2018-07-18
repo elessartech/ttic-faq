@@ -3,13 +3,17 @@
 	<title>User Panel</title>
 {% endblock %}
 {% block child %}
+{% if users is empty %}
+<p>
+        No users!
+</p>
+{% else %}
             <table>
                 <thead class="panel_dashboard_categories">
                 <tr>
                         <td>ID</td>
                         <td>Username</td>
                         <td>Email</td>
-                        <td>Chat</td>
                 </tr>
                 </thead>
                 <tbody class="panel_dashboard_cell">
@@ -18,9 +22,9 @@
                     <td>{{user.id}}</td>
                     <td><p>{{user.login}}</p></td>
                     <td><p>{{user.email}}</p></td>
-                    <td></td>
                 </tr>
                 {% endfor %}
                 </tbody>
         </table>
+        {% endif %}
 {% endblock %}

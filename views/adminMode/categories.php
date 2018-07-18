@@ -3,6 +3,11 @@
 	<title>Admin Panel</title>
 {% endblock %}
 {% block child %}
+{% if categories is empty %}
+    <p>
+        No categories!
+    </p>
+{% else %}
             <form class="add_categories_container" method="POST" action="?/categories/addCategory">
                 <input type="text" name="new_category" placeholder="Add category" class="add_categories_input">
                 <input type="submit" name="new_category_submit" value="Add" class="add_categories_submit">
@@ -35,4 +40,5 @@
                 {% endfor %}
                 </tbody>
         </table>
+    {% endif %}
 {% endblock %}

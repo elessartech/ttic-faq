@@ -18,19 +18,6 @@ class CategoriesModel
 		return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     }
 
-	/*public function getQuestionCategories() 
-	{
-		$query = "SELECT categories.id, categories.category, 
-		count(questions.category_id) as count_questions, 
-		count(questions.answer) as count_answer, 
-		count(questions.visibility) as count_visible 
-		FROM `categories` INNER JOIN `questions` 
-		ON questions.category_id = categories.id GROUP BY categories.category";
-		$sth = $this->db->prepare($query);
-		$sth->execute(); 
-		return $sth->fetchAll(PDO::FETCH_ASSOC);
-	}*/
-
 	public function deleteCategory($id) 
 	{
 		$query = "DELETE FROM categories WHERE id = ?; DELETE FROM questions WHERE category_id = ?";

@@ -741,7 +741,7 @@ header h1 {
 }
 
 .panel_dashboard table {
-  max-width: 1250px;
+  max-width: 1450px;
   margin: 10px auto;
 }
 
@@ -1012,4 +1012,132 @@ header h1 {
   background: #fff;
   color: #a9c056;
   cursor: pointer;
+}
+
+/* Prefooter section */
+
+.prefooter_section {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  background: #010101;
+}
+
+.prefooter_header_section {
+  padding-top: 5em;  
+  text-align: center;
+}
+
+.prefooter_header_section h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  padding-bottom: 25px;
+  color: #fff;
+}
+
+.prefooter_header_section p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  color: #313841;
+  padding: 0px 20em;
+  margin-bottom: 50px;
+}
+
+.prefooter_header_section input[type='text'] {
+  padding: 20px;
+  width: 650px;
+  height: 50px;
+  border-radius: 7px;
+  margin-right: 20px;
+  border: none;
+  color: #555555;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.prefooter_header_section input[type='submit'] {
+  color: #010101;
+  min-height: 50px;
+  border-radius: 7px;
+  min-width: 125px;
+  background-color: #a9c056;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+.prefooter_header_section input[type='submit']:hover {
+  background-color: #313841;
+  color: #a9c056;
+}
+
+.prefooter_icons {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+}
+
+.prefooter_icons a i {
+  color: #ffffff;
+  font-size: 5em;
+  padding: 8px;
+}
+.prefooter_icons a i:hover {
+  color: #a9c056;
+}
+
+/* Footer section */
+
+.footer_section {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  background: #010101;
+  color: #ffff;
+}
+
+.footer_container {
+  display: flex;
+  padding-bottom: 5em;
+  padding-top: 5em;
+  justify-content: space-around;
+}
+
+.footer_author {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer_author li {
+  margin-bottom: 9px;
+}
+
+.footer_author li h4 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.footer_menu {
+  display: inline-flex;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer_menu li {
+  margin-right: 20px;
+}
+.footer_menu li:last-child {
+  margin-right: 0px;
+}
+
+.footer_menu li a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.footer_menu li a:hover {
+  color: #a9c056;
 }

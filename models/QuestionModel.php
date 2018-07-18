@@ -18,6 +18,15 @@ class QuestionModel
         return $sth->fetchAll(PDO::FETCH_ASSOC); 
     }
 
+    public function getCategoryIdById($id)
+    {
+        $query = "SELECT category_id FROM questions WHERE id=?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $id, PDO::PARAM_INT);
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_ASSOC); 
+    }
+
     public function getQuestionCategories() 
 	{
 		$query = "SELECT id, category FROM categories";
@@ -70,15 +79,16 @@ class QuestionModel
         return $sth->execute(); 
     }
 
-    public function makeSuggestion($id, $username, $question, $suggestion, $email)
+    public function makeSuggestion($id, $username, $question, $suggestion, $email, $category_id)
     {
-        $query = "INSERT INTO suggestions (id, username, question, suggestion, date, email) VALUES (?, ?, ?, ?, now(), ?)";
+        $query = "INSERT INTO suggestions (id, username, question, suggestion, date, email, category_id) VALUES (?, ?, ?, ?, now(), ?, ?)";
 		$sth = $this->db->prepare($query); 
 		$sth->bindValue(1, $id, PDO::PARAM_INT);
 		$sth->bindValue(2, $username, PDO::PARAM_STR);
 		$sth->bindValue(3, $question, PDO::PARAM_STR);
         $sth->bindValue(4, $suggestion, PDO::PARAM_STR);
         $sth->bindValue(5, $email, PDO::PARAM_STR);
+        $sth->bindValue(6, $category_id, PDO::PARAM_STR);
 		return $sth->execute(); 
     }
 

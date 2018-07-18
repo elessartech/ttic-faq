@@ -12,7 +12,6 @@ class PanelController
         $this->twig = $Twig;
     }
 
-
     public function PanelAction()
     {
         $categories = $this->model->getCategories();
@@ -54,6 +53,11 @@ class PanelController
         }
     }
 
+    public function PanelPublicateQuestion($id)
+    {
+        $this->model->publicateQuestion($id);
+        echo("<script>location.href = '?/panel';</script>");
+    }
 }
 
 ?>

@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="public/css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
 </head>
 <body>
     <header>
@@ -34,5 +35,33 @@
                 <p><input type="submit" value="Submit" name="sign_in" /></p>
             </form>
     </div>
+    <section class="prefooter_section">
+	<div class="prefooter_header_section">
+		<h3>Keep in touch with us</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+		<input type="text" placeholder="Enter your email">
+		<input type="submit" value="Submit">
+		<div class="prefooter_icons">
+            <a href="https://github.com/IlmastMaksim"><i class="fa fa-github"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100014949219835"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.linkedin.com/in/maksim-ilmast-8ba669151/"><i class="fa fa-linkedin"></i></a>
+		</div>
+	</div>
+</section>
+
+<section class="footer_section">
+	<div class="footer_container">
+		<ul class="footer_author">
+			<li><h4>Maksim Ilmast</h4></li>
+			<li>maksim.ilmast@yandex.com</li>
+			<li>+358 46 9421660</li>
+		</ul>
+		<ul class="footer_menu">
+			<li><a href="?/question">Ask a Question</a></li>
+			<li><a href="?/login">Log In</a></li>
+			<li><a href="?/register">Sign Up</a></li>
+		</ul>
+	</div>
+</section>
 </body>
 </html>

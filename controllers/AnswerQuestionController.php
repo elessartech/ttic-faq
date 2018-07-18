@@ -26,11 +26,15 @@ class AnswerQuestionController
                 $id = $_POST['id'];
                 $question_info = $this->model->getQuestion($id);
                 $question = $question_info[0]['question'];
+                
+                $category_id_info = $this->model->getCategoryIdById($id);
+                $category_id = $category_id_info[0]['category_id'];
+
                 $suggestion = trim(strip_tags($_POST['suggestion']));
                 $username = trim(strip_tags($_POST['username']));
                 $email_array = $this->model->getEmailByUsername($username);  
                 $email = $email_array[0]['email'];
-                $this->model->makeSuggestion($id, $username, $question, $suggestion, $email);
+                $this->model->makeSuggestion($id, $username, $question, $suggestion, $email, $category_id);
                 echo("<script>location.href = '?/panel';</script>");
             }
         }

@@ -30,7 +30,6 @@ class PanelModel
         $sth->execute();
         return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     }
-    
 
     public function deleteQuestion($id)
     {
@@ -44,7 +43,7 @@ class PanelModel
     {
         $query = "UPDATE questions SET visibility = NULL WHERE id = ?";
         $sth = $this->db->prepare($query);
-        $sth->bindValue(1, $id, PDO::PARAM_STR);
+        $sth->bindValue(1, $id, PDO::PARAM_INT);
         return $sth->execute();    
     }
 
@@ -55,6 +54,14 @@ class PanelModel
         $sth->bindValue(1, $category_id, PDO::PARAM_STR);
         $sth->bindValue(2, $id, PDO::PARAM_INT);
         return $sth->execute();  
+    }
+
+    public function publicateQuestion($id)
+    {
+        $query = "UPDATE questions SET visibility = 1 WHERE id = ?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $id, PDO::PARAM_INT);
+        return $sth->execute();
     }
 
 }

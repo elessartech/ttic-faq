@@ -47,4 +47,22 @@ class UsersModel
         $sth->bindValue(4, $id, PDO::PARAM_INT);
         return $sth->execute();
     }
+
+    public function changePassword($id, $old_pass, $new_pass)
+    {
+        $password = $this->getPassword($id);
+        $user_pass = $password[0]['password'];
+        $query = "UPDATE users SET password = ? WHERE id = ?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $new_pass, PDO::PARAM_STR);
+        $sth->bindValue(2, $id, PDO::PARAM_INT);
+        if ($user_pass == $old_pass)
+        {
+            return $sth->execute(); 
+        }
+        else 
+        {
+            return false;
+        }
+    }
 }

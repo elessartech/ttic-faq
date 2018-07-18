@@ -3,6 +3,11 @@
 	<title>User Panel</title>
 {% endblock %}
 {% block child %}
+{% if questions is empty %}
+<p>
+    No questions!
+</p>
+{% else %}
             <table>
                 <thead class="panel_dashboard_categories">
                 <tr>
@@ -23,4 +28,5 @@
                 {% endfor %}
                 </tbody>
         </table>
-        {% endblock %}
+    {% endif %}
+{% endblock %}

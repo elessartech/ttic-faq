@@ -3,6 +3,11 @@
 	<title>Admin Panel</title>
 {% endblock %}
 {% block child %}
+{% if users is empty %}
+    <p>
+        No users!
+    </p>
+{% else %}
             <table>
                 <thead class="panel_dashboard_categories">
                 <tr>
@@ -30,18 +35,18 @@
                             <span class="fa fa-user-plus"></span> 
                             <input type="submit" name="makeadmin" value="Make admin" class="users_button_make_admin">	
                         </form>
-                       <!-- <a href="?/adminAdmins/makeAdmin/" class="admins_delete_link"><span class="fa fa-user-plus"></span> Make admin</a>-->
                     </td>
                     <td>
-                    <form action="?/admin/change-password" method="POST">
+                    <form action="?/users/changePassword" method="POST">
                         <input type="hidden" name="id" value="{{user.id}}">
-                        <input type="hidden" name="login" value="{{user.login}}">
-                        <input type="hidden" name="login" value="{{user.email}}">
                         <div>
-                            <input type="password" name="old" placeholder="Previous Password" class="old_pass">
+                            <input type="password" name="old_pass" placeholder="Previous Password" class="old_pass">
                         </div>
                         <div>
-                            <input type="password" name="new" placeholder="New Password" class="new_pass">
+                            <input type="password" name="new_pass" placeholder="New Password" class="new_pass">
+                        </div>
+                        <div>
+                            <input type="password" name="confirm_pass" placeholder="Confirm Password" class="new_pass">
                         </div>
                         <input type="submit" name="changepassword" value="Change" class="changepass_submit">	
                     </form>
@@ -50,4 +55,5 @@
                 {% endfor %}
                 </tbody>
         </table>
+    {% endif %}
 {% endblock %}

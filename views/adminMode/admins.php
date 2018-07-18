@@ -21,17 +21,19 @@
                     <p><a href="?/admins/deleteUser/{{admin.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
                     </td>
                     <td>
-                    <form action="?/admins/change-password" method="POST">
-									<input type="hidden" name="id" value="{{admin.id}}">
-									<input type="hidden" name="login" value="{{admin.login}}">
-									<div>
-										<input type="password" name="old" placeholder="Previous Password" class="old_pass">
-									</div>
-									<div>
-										<input type="password" name="new" placeholder="New Password" class="new_pass">
-									</div>
-									<input type="submit" name="changepassword" value="Change" class="changepass_submit">	
-								</form>
+                    <form action="?/admins/changePassword" method="POST">
+                        <input type="hidden" name="id" value="{{admin.id}}">
+                        <div>
+                           <input type="password" name="old_pass" placeholder="Previous Password" class="old_pass">
+                        </div>
+                        <div>
+                           <input type="password" name="new_pass" placeholder="New Password" class="new_pass">
+                        </div>
+                        <div>
+                           <input type="password" name="confirm_pass" placeholder="Confirm Password" class="new_pass">
+                        </div>
+                        <input type="submit" name="changepassword" value="Change" class="changepass_submit">	
+                    </form>
                     </td>
                 </tr>
                 {% endfor %}

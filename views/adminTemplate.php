@@ -27,6 +27,7 @@
                 <li>Welcome {{   session_admin  }}!</li>
             {% endif %}
                 <li><i class="fa fa-question-circle"></i><a href="?/panel">Questions</a></li>
+                <li><i class="fa fa-database"></i><a href="?/suggestions">Suggestions</a></li>
                 <li><i class="fa fa-user"></i><a href="?/admins">Admins</a></li>
                 <li><i class="fa fa-users"></i><a href="?/users">Users</a></li>
                 <li><i class="fa fa-list-ol"></i><a style="padding-left: 5px;" href="?/categories">Categories</a></li>

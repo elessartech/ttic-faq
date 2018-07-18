@@ -42,22 +42,10 @@ public function EditQuestionCheck()
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 }
+
 
 
 
