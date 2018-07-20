@@ -1,7 +1,13 @@
 ﻿<?php
 
+
+
 class IndexController 
 {
+
+	const DEVELOPER_EMAIL = 'maksim.ilmast@yandex.com';
+	const HEADER = 'From: ';
+	const DEFAULT_MESSAGE = 'You have received an email from ';
 
 	public $model = null;
 	public function __construct($db, $twig)
@@ -11,7 +17,7 @@ class IndexController
 		$this->twig = $twig;
 	}
 
-	public function indexAction() 
+	public function IndexAction() 
 	{
 		$categories = $this->model->getCategories();
 		foreach ($categories as $category)
@@ -21,6 +27,7 @@ class IndexController
 		$template = $this->twig->loadTemplate('index.php');
 		echo $template->render(['questions'=>$array, 'categories'=>$categories, 'session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin']]);
 	}
+
 
 
 }

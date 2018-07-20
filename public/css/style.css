@@ -90,10 +90,6 @@ Main components
   padding-bottom: 5px;
 }
 
-.main_menu li:nth-child(3) {
-  margin-right: 0px;
-}
-
 nav {
   margin-top: 60px;
 }
@@ -919,8 +915,6 @@ header h1 {
   margin: 5px 0px;
   padding: 7px;
   border-radius: 10px;
-}
-.edit_question_textarea {
   outline: none;
 }
 
@@ -1044,7 +1038,11 @@ header h1 {
   margin-bottom: 50px;
 }
 
-.prefooter_header_section input[type='text'] {
+.prefooter_form {
+  display: block;
+}
+
+.prefooter_header_section input[type='email'] {
   padding: 20px;
   width: 650px;
   height: 50px;
@@ -1056,8 +1054,20 @@ header h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
+.prefooter_header_section textarea {
+  height: 220px;
+  width: 650px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .prefooter_header_section input[type='submit'] {
   color: #010101;
+  margin-top: 20px;
   min-height: 50px;
   border-radius: 7px;
   min-width: 125px;
@@ -1103,7 +1113,7 @@ header h1 {
 
 .footer_container {
   display: flex;
-  padding-bottom: 5em;
+  padding-bottom: 3em;
   padding-top: 5em;
   justify-content: space-around;
 }

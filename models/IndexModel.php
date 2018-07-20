@@ -8,18 +8,6 @@ class IndexModel
 		$this->db = $dbname;
 	}
 
-	public function getQuestions() 
-	{
-		$query = "SELECT questions.question, questions.answer, categories.category 
-		FROM questions INNER JOIN categories 
-		ON questions.category_id = categories.id WHERE visibility = 1 
-		ORDER BY categories.category DESC";
-		$sth = $this->db->prepare($query); 
-		$sth->execute(); 
-		return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-	}
-
-
 	public function getCategories() 
 	{
 		$query = "SELECT id, category FROM categories";

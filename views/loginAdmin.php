@@ -21,6 +21,7 @@
             <li><a href="?/question">Ask a Question</a></li>
 			<li><a href="?/login">Log In</a></li>
             <li><a href="?/register">Sign Up</a></li>
+            <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -33,16 +34,14 @@
                 <p><input type="submit" value="Submit" name="sign_in" /></p>
             </form>
     </div>
-    <section class="prefooter_section">
+    <section class="prefooter_section" id="contact">
 	<div class="prefooter_header_section">
-		<h3>Keep in touch with us</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-		<input type="text" placeholder="Enter your email">
-		<input type="submit" value="Submit">
+		<h3>Keep in touch with developers</h3>
+		<p>Thanks for visiting our community site! It would be really fantastic to fetch some feedback from you!</p>
 		<div class="prefooter_icons">
-            <a href="https://github.com/IlmastMaksim"><i class="fa fa-github"></i></a>
-			<a href="https://www.facebook.com/profile.php?id=100014949219835"><i class="fa fa-facebook"></i></a>
-			<a href="https://www.linkedin.com/in/maksim-ilmast-8ba669151/"><i class="fa fa-linkedin"></i></a>
+			<a target="__blank" href="https://github.com/IlmastMaksim"><i class="fa fa-github"></i></a>
+			<a target="__blank" href="https://www.facebook.com/profile.php?id=100014949219835"><i class="fa fa-facebook"></i></a>
+			<a target="__blank" href="https://www.linkedin.com/in/maksim-ilmast-8ba669151/"><i class="fa fa-linkedin"></i></a>
 		</div>
 	</div>
 </section>
@@ -57,9 +56,12 @@
 		<ul class="footer_menu">
 			<li><a href="?/question">Ask a Question</a></li>
 			<li><a href="?/login">Log In</a></li>
-			<li><a href="?/register">Sign Up</a></li>
+            <li><a href="?/register">Sign Up</a></li>
+            <li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </section>
+<script src="public/js/lib/jquery-2.1.1.js"></script>
+<script src="public/js/app.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

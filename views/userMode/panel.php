@@ -22,7 +22,7 @@
                     <td>{{ question.question }}</td>
                     <td><p>{{ question.author }} ({{ question.email }})</p><p>{{ question.date_added }}</p></td>
                     <td>
-                    <p><i class="fa fa-comment"></i><a class="admins_delete_link" href="?/answerQuestion/{{ question.id }}"> Answer</a></p>
+                    <p><i class="fa fa-comment"></i><a class="admins_delete_link" href="?/answerQuestion/{{ question.id }}"> Give a suggestion</a></p>
                     </td>
                 </tr>
                 {% endfor %}

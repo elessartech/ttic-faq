@@ -23,6 +23,23 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	// enabling smooth scroll
+	$(function(){
+		$('a[href*="#"]:not([href="#"])').click(function(){
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		}); 
+	});
+
+
 	//close faq lateral panel - mobile only
 	$('body').bind('click touchstart', function(event){
 		if( $(event.target).is('body.cd-overlay') || $(event.target).is('.cd-close-panel')) { 

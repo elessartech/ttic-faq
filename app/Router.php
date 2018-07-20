@@ -3,7 +3,7 @@
 class Router {
 
     const DEFAULT_OPTION = 'Index';
-    const DEFAULT_ACTION = 'Check';
+    const DEFAULT_ACTION = 'Action';
 
     public static function run($db, $Twig)
     {
@@ -16,7 +16,11 @@ class Router {
             $route['action'] = $url[3];
             $route['id'] = $url[4];
         } 
-        else if (count($url) > 1) $route['controller'] = $url[1];
+        else if (count($url) > 1)
+        {
+            $route['controller'] = $url[1];
+            $route['action'] = $url[2];
+        }
 
         $controllerName = ucfirst($route['controller']);
 
@@ -52,11 +56,11 @@ class Router {
             $controllerObject->$actionName();
         }
 
-        if (isset($route['action']) && $controllerName != Router::DEFAULT_OPTION && strlen($route['id']) < 1) 
+        if (isset($route['action']) && ucfirst($route['action']) != Router::DEFAULT_ACTION && strlen($route['id']) < 1) 
         {
             $controllerObject->$specificActionName();
         }
-        else if (isset($route['action']) && $controllerName != Router::DEFAULT_OPTION && strlen($route['id']) >= 1)
+        else if (isset($route['action']) && ucfirst($route['action']) != Router::DEFAULT_ACTION && strlen($route['id']) >= 1)
         {
             $controllerObject->$specificActionName($route['id']);
         }

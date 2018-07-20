@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="public/css/style.css"> <!-- Resource style -->
 	<script src="public/js/lib/modernizr.js"></script> <!-- Modernizr -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
 	
 	<title>Main</title>
 </head>
@@ -30,6 +30,7 @@
 				<li><a href="?/question">Ask a Question</a></li>
 				<li><a href="?/login">Log In</a></li>
 				<li><a href="?/register">Sign Up</a></li>
+				<li><a href="#contact">Contact</a></li>
 			{% endif %}
 		</ul>
 	</nav>
@@ -50,7 +51,7 @@
 			{% for question in value %}
 			<li>
 				<a class="cd-faq-trigger" href="#0">{{question.question}}</a>
-				<div class="cd-faq-content">
+				<div class="cd-faq-content">			
 					<p>{{question.answer}}</p>
 				</div> <!-- cd-faq-content -->
 			</li>
@@ -61,16 +62,14 @@
 	<a href="#0" class="cd-close-panel">Close</a>
 </section> <!-- cd-faq -->
 
-<section class="prefooter_section">
+<section class="prefooter_section" id="contact">
 	<div class="prefooter_header_section">
-		<h3>Keep in touch with us</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-		<input type="text" placeholder="Enter your email">
-		<input type="submit" value="Submit">
+		<h3>Keep in touch with developers</h3>
+		<p>Thanks for visiting our community site! It would be really fantastic to fetch some feedback from you!</p>
 		<div class="prefooter_icons">
-			<a href="https://github.com/IlmastMaksim"><i class="fa fa-github"></i></a>
-			<a href="https://www.facebook.com/profile.php?id=100014949219835"><i class="fa fa-facebook"></i></a>
-			<a href="https://www.linkedin.com/in/maksim-ilmast-8ba669151/"><i class="fa fa-linkedin"></i></a>
+			<a target="__blank" href="https://github.com/IlmastMaksim"><i class="fa fa-github"></i></a>
+			<a target="__blank" href="https://www.facebook.com/profile.php?id=100014949219835"><i class="fa fa-facebook"></i></a>
+			<a target="__blank" href="https://www.linkedin.com/in/maksim-ilmast-8ba669151/"><i class="fa fa-linkedin"></i></a>
 		</div>
 	</div>
 </section>
@@ -86,6 +85,7 @@
 			<li><a href="?/question">Ask a Question</a></li>
 			<li><a href="?/login">Log In</a></li>
 			<li><a href="?/register">Sign Up</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </section>
