@@ -27,10 +27,10 @@
 			<li><a href="?/panel"><i style="color: #fff; margin-right: 7px;" class="fa fa-user"></i>User Panel</a></li>
 			<li><a href="?/login/logout"> <i style="color: #fff; margin-right: 7px;" class="fa fa-sign-out"></i>Log Out</a></li>
 			{% else %}
-				<li><a href="?/question">Ask a Question</a></li>
-				<li><a href="?/login">Log In</a></li>
-				<li><a href="?/register">Sign Up</a></li>
-				<li><a href="#contact">Contact</a></li>
+			<li><a href="/faq-service/">Home</a></li>
+            <li><a href="?/about">About</a></li>
+			<li><a href="?/login">Log In</a></li>
+			<li><a href="#contact">Contact</a></li>
 			{% endif %}
 		</ul>
 	</nav>
@@ -82,9 +82,9 @@
 			<li>+358 46 9421660</li>
 		</ul>
 		<ul class="footer_menu">
-			<li><a href="?/question">Ask a Question</a></li>
+			<li><a href="/faq-service/">Home</a></li>
+            <li><a href="?/about">About</a></li>
 			<li><a href="?/login">Log In</a></li>
-			<li><a href="?/register">Sign Up</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
@@ -92,5 +92,6 @@
 
 <script src="public/js/lib/jquery-2.1.1.js"></script>
 <script src="public/js/app.js"></script> <!-- Resource jQuery -->
+<script src="public/js/scroll.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

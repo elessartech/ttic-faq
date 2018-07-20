@@ -18,10 +18,10 @@
         <h1 class="main_title"><a href="/faq-service/">TTIC FAQ</a></h1>
         <nav>
             <ul class="main_menu">
-            <li><a href="?/question">Ask a Question</a></li>
+            <li><a href="/faq-service/">Home</a></li>
+            <li><a href="?/about">About</a></li>
 			<li><a href="?/login">Log In</a></li>
-            <li><a href="?/register">Sign Up</a></li>
-            <li><a href="#contact">Contact</a></li>
+			<li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -56,14 +56,14 @@
 			<li>+358 46 9421660</li>
 		</ul>
 		<ul class="footer_menu">
-			<li><a href="?/question">Ask a Question</a></li>
+            <li><a href="/faq-service/">Home</a></li>
+            <li><a href="?/about">About</a></li>
 			<li><a href="?/login">Log In</a></li>
-            <li><a href="?/register">Sign Up</a></li>
-            <li><a href="#contact">Contact</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </section>
 <script src="public/js/lib/jquery-2.1.1.js"></script>
-<script src="public/js/app.js"></script> <!-- Resource jQuery -->
+<script src="public/js/scroll.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

@@ -98,6 +98,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 75%;
+  margin-bottom:250px;
 }
 
 .main_block_descr {
@@ -109,6 +110,10 @@ nav {
   font-weight: 700;
   color: #010101;
   margin-bottom: 30px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 48px;
+  margin-top: 24px;
 }
 
 .main_descr_side_title {
@@ -116,16 +121,22 @@ nav {
   font-weight: 400;
   color: #313841;
   margin-bottom: 30px;
+  line-height: 40px;
+  margin-top: 24px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .main_descr_text {
   color: #555555;
   font-size: 15px;
   font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
+  margin-bottom: 16px;
 }
 
 .main_block_img img{
-  background: url(img/first.jpg) center center no-repeat;
+  background: url(../img/first.jpg) center center no-repeat;
   box-shadow: 1px 5.732px 50px #010101;
   min-width: 640px;
   min-height: 425px;
@@ -141,7 +152,7 @@ header {
   height: 180px;
   line-height: 180px;
   text-align: center;
-  background-color: #a9c056;
+  background-color: #55a027;
 }
 header h1 {
   color: #ffffff;
@@ -260,7 +271,7 @@ header h1 {
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #a9c056;
+    background-color: #55a027;
     opacity: 0;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
@@ -532,6 +543,113 @@ header h1 {
   }
 }
 
+/* Features section */
+
+
+.features_section {
+  background-color: #55a027;
+}
+
+.features_header_section {
+  margin-top: 125px;  
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.features_header_section h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  color: #42464b;
+  font-weight: 700;
+  line-height: 48px;
+  padding-top: 2em;
+  margin-bottom: 24px;
+}
+
+.features_header_section p {
+  font-family: 'Open Sans', sans-serif;
+  color: #313841;
+  padding: 0px 20em;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.features_container {
+  padding-bottom: 165px;
+  padding-left: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.features {
+  margin-left: 7em;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.features_item {
+  width: 33%;
+}
+
+.features_icon {
+  position: absolute;
+  margin-left: -115px;
+  width: 95px;
+  height: 103px;
+}
+
+.features_item:nth-child(1) .features_icon {
+  background: url(../img/what-we-do-sprite.png) no-repeat left top;
+}
+
+.features_item:nth-child(2) .features_icon {
+  background: url(../img/what-we-do-sprite.png) no-repeat left -103px;
+}
+
+.features_item:nth-child(3) .features_icon {
+  background: url(../img/what-we-do-sprite.png) no-repeat left -200px;
+}
+
+.features_item:nth-child(4) .features_icon {
+  background: url(../img/what-we-do-sprite.png) no-repeat left -308px;
+}
+
+.features_item:nth-child(5) .features_icon {
+  background: url(../img/what-we-do-sprite.png) no-repeat left -412px;
+}
+
+.features_item:nth-child(6) .features_icon {
+  background: url(../img/what-we-do-sprite.png) no-repeat left -515px;
+}
+
+.features_item h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #42464b;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.features_item p {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 115px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+
 /* Login section */
 .login {
   width: 65%;
@@ -546,7 +664,7 @@ header h1 {
 }
 
 .login-header {
-  background: #a9c056;
+  background: #55a027;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -589,7 +707,7 @@ header h1 {
 }
 
 .login input[type="submit"] {
-  background: #a9c056;
+  background: #55a027;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
@@ -597,13 +715,13 @@ header h1 {
 
 .login input[type="submit"]:hover {
   background: #fff;
-  color: #a9c056;
+  color: #55a027;
   cursor: pointer;
 }
 
 .login input[type="submit"]:focus {
   background: #fff;
-  color: #a9c056;
+  color: #55a027;
   cursor: pointer;
 }
 
@@ -614,7 +732,7 @@ header h1 {
 }
 
 .login_as_admin a span {
-  color: #a9c056;
+  color: #55a027;
 }
 
 /* End of Login section */
@@ -636,7 +754,7 @@ header h1 {
 }
 
 .question-header {
-  background: #a9c056;
+  background: #55a027;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -680,7 +798,7 @@ header h1 {
 }
 
 .question input[type="submit"] {
-  background: #a9c056;
+  background: #55a027;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
@@ -688,13 +806,13 @@ header h1 {
 
 .question input[type="submit"]:hover {
   background: #fff;
-  color: #a9c056;
+  color: #55a027;
   cursor: pointer;
 }
 
 .question input[type="submit"]:focus {
   background: #fff;
-  color: #a9c056;
+  color: #55a027;
   cursor: pointer;
 }
 
@@ -733,7 +851,7 @@ header h1 {
   padding-left: 10px;
 }
 .panel_menu ul li a:hover {
-  color: #a9c056;
+  color: #55a027;
 }
 
 .panel_dashboard table {
@@ -823,7 +941,7 @@ header h1 {
 }
 
 .panel_actions .panel_actions_off:hover {
-  color: #a9c056;
+  color: #55a027;
 }
 
 .admins_delete_link:hover {
@@ -845,7 +963,7 @@ header h1 {
   min-width: 150px;
   margin-top: 10px;
   margin-left: 40px;
-  background-color: #a9c056;
+  background-color: #55a027;
   border: none;
   border-radius: 6%; 
   cursor: pointer;
@@ -856,11 +974,11 @@ header h1 {
 }
 .changepass_submit:hover, .add_categories_submit:hover, .edit_question_submit:hover {
   background: #42464b;
-  color: #a9c056;
+  color: #55a027;
 }
 .changepass_submit:focus, .add_categories_submit:focus, .edit_question_submit:focus {
   background: #42464b;
-  color: #a9c056;
+  color: #55a027;
 }
 
 .add_categories_container {
@@ -946,7 +1064,7 @@ header h1 {
 }
 
 .question-header {
-  background: #a9c056;
+  background: #55a027;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -990,7 +1108,7 @@ header h1 {
 }
 
 .ask_question input[type="submit"] {
-  background: #a9c056;
+  background: #55a027;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
@@ -998,13 +1116,13 @@ header h1 {
 
 .ask_question input[type="submit"]:hover {
   background: #fff;
-  color: #a9c056;
+  color: #55a027;
   cursor: pointer;
 }
 
 .ask_question input[type="submit"]:focus {
   background: #fff;
-  color: #a9c056;
+  color: #55a027;
   cursor: pointer;
 }
 
@@ -1033,6 +1151,7 @@ header h1 {
 .prefooter_header_section p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
+  font-weight: 600;
   color: #313841;
   padding: 0px 20em;
   margin-bottom: 50px;
@@ -1071,7 +1190,7 @@ header h1 {
   min-height: 50px;
   border-radius: 7px;
   min-width: 125px;
-  background-color: #a9c056;
+  background-color: #55a027;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -1081,7 +1200,7 @@ header h1 {
 }
 .prefooter_header_section input[type='submit']:hover {
   background-color: #313841;
-  color: #a9c056;
+  color: #55a027;
 }
 
 .prefooter_icons {
@@ -1098,7 +1217,7 @@ header h1 {
   padding: 8px;
 }
 .prefooter_icons a i:hover {
-  color: #a9c056;
+  color: #55a027;
 }
 
 /* Footer section */
@@ -1149,5 +1268,5 @@ header h1 {
 }
 
 .footer_menu li a:hover {
-  color: #a9c056;
+  color: #55a027;
 }
