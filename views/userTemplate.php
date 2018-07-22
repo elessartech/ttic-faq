@@ -28,7 +28,7 @@
             {% endif %}
                 <li><i class="fa fa-question-circle"></i><a href="?/panel">Questions</a></li>
                 <li><i class="fa fa-bullhorn"></i><a style="padding-left: 5px;" href="?/askQuestion">Ask a Question</a></li>
-                <li><i class="fa fa-users"></i><a href="?/users">Users</a></li>
+                <li><i class="fa fa-cogs"></i><a href="?/settings">Settings</a></li>
                 <li><i class="fa fa-sign-out"></i><a href="?/login/logout">Log Out</a></li>
             </ul>  
         </div>

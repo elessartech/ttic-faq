@@ -55,18 +55,14 @@ class SuggestionsModel
         $suggestion_info = $this->getSuggestion($id);
         
         $question = $suggestion_info[0]['question'];
-        $author = $suggestion_info[0]['username'];
-        $email = $suggestion_info[0]['email'];
         $answer = $suggestion_info[0]['suggestion'];
 
-        $query = "UPDATE questions SET question = ?, author = ?, email = ?, answer = ?, visibility = 1 WHERE id = ?; DELETE FROM suggestions WHERE id=?";
+        $query = "UPDATE questions SET question = ?, answer = ?, visibility = 1 WHERE id = ?; DELETE FROM suggestions WHERE id=?";
 		$sth = $this->db->prepare($query);
 		$sth->bindValue(1, $question, PDO::PARAM_STR);
-		$sth->bindValue(2, $author, PDO::PARAM_STR);
-		$sth->bindValue(3, $email, PDO::PARAM_STR);
-        $sth->bindValue(4, $answer, PDO::PARAM_STR);
-        $sth->bindValue(5, $id, PDO::PARAM_INT);
-        $sth->bindValue(6, $id, PDO::PARAM_INT);
+        $sth->bindValue(2, $answer, PDO::PARAM_STR);
+        $sth->bindValue(3, $id, PDO::PARAM_INT);
+        $sth->bindValue(4, $id, PDO::PARAM_INT);
 		return $sth->execute();
     } 
 }

@@ -38,14 +38,14 @@
                     <td class="panel_status">
                     {% if question.answer is null and question.visibility is null %}
                         <p>Waiting for response</p>
-                        <p>(not publicated)</p>
+                        <p>(not published)</p>
                     {% endif %}
                     {% if question.answer and question.visibility is null %}
-                        <p>Not publicated</p>
+                        <p>Not published</p>
                         <p>(response given)</p>
                     {% endif %}
                     {% if question.answer and question.visibility %}
-                        <p>Publicated</p>
+                        <p>Published</p>
                         <p>(response given)</p>
                     {% endif %}
                     </td>

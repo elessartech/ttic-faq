@@ -15,7 +15,7 @@ Primary style
 
 body {
   font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   color: #4e5359;
   background-color: #f3f3f5;
 }
@@ -915,9 +915,18 @@ header h1 {
 }
 
 .panel_dashboard_select_sub {
-  width: 50px;
-  height: 20px;
-  margin: 25px 0px 0px 20px;
+  max-height: 42px;
+  min-width: 60px;
+  margin-top: 1rem;
+  margin-left: 40px;
+  background-color: #55a027;
+  border: none;
+  border-radius: 6%;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .panel_status p:first-child {
@@ -933,16 +942,10 @@ header h1 {
 }
 
 .panel_actions .panel_actions_del:hover {
-  color: red;
+  border-bottom: solid #4e5359 2px;
 }
 
-.panel_actions .panel_actions_edit:hover {
-  color: yellow;
-}
-
-.panel_actions .panel_actions_off:hover {
-  color: #55a027;
-}
+/* Admins section */
 
 .admins_delete_link:hover {
   border-bottom: solid 2px #313841;
@@ -980,6 +983,8 @@ header h1 {
   background: #42464b;
   color: #55a027;
 }
+
+/* Categories section */
 
 .add_categories_container {
   margin-left: 8em;
@@ -1268,5 +1273,58 @@ header h1 {
 }
 
 .footer_menu li a:hover {
+  color: #55a027;
+}
+
+/* Settings section */
+
+.settings_main h1 {
+  font-size: 2rem;
+  border-bottom: solid #4e5359 2px;
+  padding-bottom: 10px;
+}
+
+.settings_container {
+  margin-top: 1em;
+  height: 100%;
+  min-height: 500px;
+}
+
+.settings_cell {
+  margin-bottom: 1rem; 
+}
+
+.settings_header {
+  margin-bottom: 10px;
+}
+
+.settings_text {
+  margin-bottom: 10px;
+  padding: 7px;
+  border-radius: 10px;
+  height: 41px;
+  width: 230px;
+  outline: none;
+  
+}
+
+.settings_input {
+  min-height: 41px;
+  min-width: 150px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  background-color: #55a027;
+  border: none;
+  border-radius: 6%; 
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.settings_input:hover {
+  background-color: #42464b;
   color: #55a027;
 }

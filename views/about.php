@@ -44,52 +44,52 @@
     <section class="features_section" id="features_section">
           <div class="features_header_section">
           <h2>TTIC FAQ features</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error.</p>
+          <p>A few aspects of why you should defenetly check out our service</p>
           </div>
         <div class="features_container">
           <div class="features">
             <div class="features_item">
             <div class="features_icon"></div>
-              <h2>Lorem ipsum</h2>
+              <h2>Problem solving</h2>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+              Great source of new knowledges and also can be used for rediscovering the old ones
               </p>
             </div>
             <div class="features_item">
             <div class="features_icon"></div>
-              <h2>Lorem ipsum</h2>
+              <h2>Entertainment</h2>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+                We hope you will enjoy the process of gaining information
               </p>
             </div>
             <div class="features_item">
             <div class="features_icon"></div>
-              <h2>Lorem ipsum</h2>
+              <h2>Simplicity</h2>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+                Made with care and love for newbees  
               </p>
             </div>
 
         
             <div class="features_item">
             <div class="features_icon"></div>
-              <h2>Lorem ipsum</h2>
+              <h2>Comfortability</h2>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+              Choose the position you like to sit and find your answers peacefully
               </p>
             </div>
             <div class="features_item">
               <div class="features_icon"></div>
-              <h2>Lorem ipsum</h2>
+              <h2>Usability</h2>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+                Can be used on different devices, from cell phone to pc
               </p>
             </div>
             <div class="features_item">
                 <div class="features_icon"></div>
-                    <h2>Lorem ipsum</h2>
+                    <h2>Multiculturalism</h2>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+                        Answers might be given and found in multiple foreign langueges 
                     </p>
                 </div>
             </div>

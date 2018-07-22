@@ -18,6 +18,15 @@ class UsersModel
 		return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getUser($username)
+    {
+        $query = "SELECT id, login, email FROM users WHERE login=?";
+        $sth = $this->db->prepare($query); 
+        $sth->bindValue(1, $username, PDO::PARAM_STR);
+		$sth->execute(); 
+		return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     protected function getPassword($id)
     {
         $query = "SELECT password FROM users WHERE id=?";
@@ -25,6 +34,24 @@ class UsersModel
         $sth->bindValue(1, $id, PDO::PARAM_INT);
 		$sth->execute(); 
 		return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function changeUsername($id, $login)
+    {  
+        $query = "UPDATE users SET login = ? WHERE id = ?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $login, PDO::PARAM_STR);
+        $sth->bindValue(2, $id, PDO::PARAM_INT); 
+        return $sth->execute(); 
+    }
+
+    public function changeEmail($id, $email)
+    {  
+        $query = "UPDATE users SET email = ? WHERE id = ?";
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(1, $email, PDO::PARAM_STR);
+        $sth->bindValue(2, $id, PDO::PARAM_INT); 
+        return $sth->execute(); 
     }
 
     public function deleteUser($id)

@@ -18,10 +18,6 @@ class UsersController
         {
             $template = $this->twig->loadTemplate('adminMode/users.php');
         }
-        else
-        {
-            $template = $this->twig->loadTemplate('userMode/users.php');
-        }
 		echo $template->render( ['session_user'=>$_SESSION['user'], 'session_admin'=>$_SESSION['admin'], 'users'=>$users] );
     }
 
