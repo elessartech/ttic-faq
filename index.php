@@ -5,6 +5,8 @@
 	ini_set('display_errors', 1);
 	require_once 'vendor/autoload.php';
 	require_once 'config/database.php';
+
+	
     
     $config = include 'config/dbdata.php';
     $loader = new Twig_Loader_Filesystem('views');

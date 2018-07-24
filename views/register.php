@@ -27,13 +27,17 @@
     </div>
     </header>
     <div class="login">
+            <div class="error_container" id='error_container'>
+                    <span id="error_message"></span>
+                    <button id="error_button" class="error_button"><i class="fa fa-times"></i></button>
+            </div>
             <h2 class="login-header">Sign up</h2>
             <form action='?/register/check' method="POST" class="login-container">
                 <p><input type="text" placeholder="Username" name="login"   /></p>
                 <p><input type="text" placeholder="Email" name="email"   /></p>
                 <p><input type="password" placeholder="Password" name="pass"   /></p>
                 <p><input type="password" placeholder="Confirm Password" name="pass_2"   /></p>
-                <p><input type="submit" value="Submit" name="sign_in" /></p>
+                <p><input type="submit" value="Submit" name="sign_in" class='login-container-last-child' /></p>
             </form>
     </div>
     <section class="prefooter_section" id="contact">
@@ -65,5 +69,6 @@
 </section>
 <script src="public/js/lib/jquery-2.1.1.js"></script>
 <script src="public/js/scroll.js"></script> <!-- Resource jQuery -->
+<script src="public/js/error_message.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

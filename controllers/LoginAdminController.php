@@ -31,13 +31,26 @@ class LoginAdminController
                         $_SESSION['admin'] = $login;
                         header("Location:/faq-service/?/panel");
                     }
-                    else 
+                    else
                     {
-                        header("Location:/login/?error=wrong");
+                        echo("
+                        <script>
+                            var errorTag = document.querySelector('#error_message');
+                            errorTag.innerHTML = 'Incorrect username or password.'; 
+                        </script>
+                        ");
                     }
-                }   
+                }
+                else 
+                {
+                    echo("
+                        <script>
+                            var errorTag = document.querySelector('#error_message');
+                            errorTag.innerHTML = 'Please, fill all inputs properly.'; 
+                        </script>
+                        ");
+                }  
             }
         }
     }
-
 }

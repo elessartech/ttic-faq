@@ -27,7 +27,7 @@ class UsersModel
 		return $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    protected function getPassword($id)
+    private function getPassword($id)
     {
         $query = "SELECT password FROM users WHERE id=?";
         $sth = $this->db->prepare($query); 

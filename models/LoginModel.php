@@ -26,6 +26,16 @@ class LoginModel
         return $result;
     }
 
+    public function registerUser($email, $login, $pass)
+    {
+        $query = "INSERT INTO users (email, login, password) VALUES (?, ?, ?)";
+		$sth = $this->db->prepare($query); 
+		$sth->bindValue(1, $email, PDO::PARAM_STR);
+		$sth->bindValue(2, $login, PDO::PARAM_STR);
+		$sth->bindValue(3, $pass, PDO::PARAM_STR);
+		return $sth->execute();
+    }
+
     public function isAdmin($login)
     {
         $sth = $this->db->prepare("SELECT id FROM admins WHERE login=?");

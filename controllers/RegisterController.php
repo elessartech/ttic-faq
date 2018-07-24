@@ -5,8 +5,8 @@ class RegisterController
 
     public function __construct($db, $Twig)
     {
-        include 'models/RegisterModel.php';
-        $this->model = new RegisterModel($db);
+        include 'models/LoginModel.php';
+        $this->model = new LoginModel($db);
         $this->twig = $Twig;
     }
 
@@ -31,7 +31,12 @@ class RegisterController
                         $pass = md5(trim(strip_tags($_POST['pass'])));
                         if ($this->model->isUser($login))
                         {
-                            header("Location:/login/?error=wrong");
+                            echo("
+                                <script>
+                                    var errorTag = document.querySelector('#error_message');
+                                    errorTag.innerHTML = 'This user alredy exists.'; 
+                                </script>
+                            ");
                         }
                         else 
                         {
@@ -40,6 +45,24 @@ class RegisterController
                             header("Location:/faq-service/?/panel");
                         }
                     }
+                    else 
+                    {
+                        echo("
+                            <script>
+                                var errorTag = document.querySelector('#error_message');
+                                errorTag.innerHTML = 'Passwords do not match.'; 
+                            </script>
+                        ");
+                    }
+                }
+                else
+                {
+                    echo("
+                        <script>
+                            var errorTag = document.querySelector('#error_message');
+                            errorTag.innerHTML = 'Please, fill all inputs properly.'; 
+                        </script>
+                    ");
                 }   
             }
         }

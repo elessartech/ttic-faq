@@ -87,7 +87,7 @@
             </div>
             <div class="features_item">
                 <div class="features_icon"></div>
-                    <h2>Multiculturalism</h2>
+                    <h2>Multilingualism</h2>
                     <p>
                         Answers might be given and found in multiple foreign langueges 
                     </p>
