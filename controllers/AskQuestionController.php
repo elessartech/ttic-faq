@@ -33,6 +33,15 @@ class AskQuestionController
                     $this->model->insertQuestion($question, $author, $email, $category);
                     echo("<script>location.href = '?/panel';</script>");
                 }
+                else 
+                {
+                    echo("
+                        <script>
+                            var errorTag = document.querySelector('.error_message');
+                            errorTag.innerHTML = 'Please, fill the input properly.'; 
+                        </script>
+                    ");
+                }
             }
         }
 	}

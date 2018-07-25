@@ -15,11 +15,6 @@ class Router {
             $route['controller'] = $url[2];
             $route['action'] = $url[3];
             $route['id'] = $url[4];
-        } 
-        else if (count($url) > 1)
-        {
-            $route['controller'] = $url[1];
-            $route['action'] = $url[2];
         }
 
         $controllerName = ucfirst($route['controller']);

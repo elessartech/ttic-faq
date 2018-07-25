@@ -28,9 +28,21 @@ class SettingsController
                 {
                     $login = trim(strip_tags($_POST['login']));
                     $id = $_POST['id'];
-                    $this->model->changeUsername($id, $login);
-                    $_SESSION['user'] = $login;
-                    echo("<script>location.href = '?/settings';</script>");
+                    if ($this->model->findUsername($login))
+                    {
+                        echo("
+                            <script>
+                                var errorTag = document.querySelector('.error_message');
+                                errorTag.innerHTML = 'This username is already taken.'; 
+                            </script>
+                        ");   
+                    }
+                    else
+                    {
+                        $this->model->changeUsername($id, $login);
+                        $_SESSION['user'] = $login;
+                        echo("<script>location.href = '?/settings';</script>");
+                    }
                 }
             }
         }   
@@ -46,8 +58,20 @@ class SettingsController
                 {
                     $email = trim(strip_tags($_POST['email']));
                     $id = $_POST['id'];
-                    $this->model->changeEmail($id, $email);
-                    echo("<script>location.href = '?/settings';</script>");
+                    if ($this->model->findEmail($email))
+                    {
+                        echo("
+                            <script>
+                                var errorTag = document.querySelector('.error_message');
+                                errorTag.innerHTML = 'This email is already taken.'; 
+                            </script>
+                        "); 
+                    }
+                    else 
+                    {
+                        $this->model->changeEmail($id, $email);
+                        echo("<script>location.href = '?/settings';</script>");
+                    }
                 }
             }
         }   
@@ -59,7 +83,7 @@ class SettingsController
         {
             if (isset($_POST['changepassword']))
             {
-                if (isset($_POST['id']) && isset($_POST['old_pass']) && isset($_POST['new_pass']) && isset($_POST['confirm_pass'])) 
+                if (isset($_POST['id']) && !empty($_POST['old_pass']) && !empty($_POST['new_pass']) && !empty($_POST['confirm_pass'])) 
                 {
                     $id = $_POST['id'];
                     $old_pass = md5(trim(strip_tags($_POST['old_pass'])));
@@ -70,6 +94,24 @@ class SettingsController
                         $this->model->changePassword($id, $old_pass, $new_pass);
                         echo("<script>location.href = '?/settings';</script>");
                     }
+                    else 
+                    {
+                        echo("
+                            <script>
+                                var errorTag = document.querySelector('.error_message');
+                                errorTag.innerHTML = 'Passwords do not match.'; 
+                            </script>
+                        ");
+                    }
+                }
+                else 
+                {
+                    echo("
+                        <script>
+                            var errorTag = document.querySelector('.error_message');
+                            errorTag.innerHTML = 'Please, fill all inputs properly.'; 
+                        </script>
+                    ");
                 }
             }
         }

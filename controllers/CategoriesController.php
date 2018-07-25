@@ -21,11 +21,20 @@ class CategoriesController
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            if (isset($_POST['new_category']))
+            if (!empty($_POST['new_category']))
             {
                 $category = trim(strip_tags($_POST['new_category']));
                 $this->model->createCategory($category);
                 echo("<script>location.href = '?/categories';</script>");
+            }
+            else 
+            {
+                echo("
+                    <script>
+                        var errorTag = document.querySelector('.error_message');
+                        errorTag.innerHTML = 'Please, fill the input properly.'; 
+                    </script>
+                ");
             }
         }
     }

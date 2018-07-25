@@ -34,7 +34,9 @@
         </div>
         <div class="panel_dashboard">
         {% block child %}
-			{% endblock %}
+		{% endblock %}
         </div>
+<script src="public/js/lib/jquery-2.1.1.js"></script>
+<script src="public/js/error_message.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

@@ -37,7 +37,7 @@ class LoginController
                     {
                         echo("
                         <script>
-                            var errorTag = document.querySelector('#error_message');
+                            var errorTag = document.querySelector('.error_message');
                             errorTag.innerHTML = 'Incorrect username or password.'; 
                         </script>
                         ");
@@ -47,7 +47,7 @@ class LoginController
                 {
                     echo("
                         <script>
-                            var errorTag = document.querySelector('#error_message');
+                            var errorTag = document.querySelector('.error_message');
                             errorTag.innerHTML = 'Please, fill all inputs properly.'; 
                         </script>
                         ");

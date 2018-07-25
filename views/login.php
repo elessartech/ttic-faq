@@ -27,9 +27,9 @@
     </div>
     </header>
     <div class="login">
-            <div class="error_container" id='error_container'>
-                    <span id="error_message"></span>
-                    <button id="error_button" class="error_button"><i class="fa fa-times"></i></button>
+            <div class="error_container">
+                <span class="error_message"></span>
+                <button class="error_button"><i class="fa fa-times"></i></button>
             </div>
             <h2 class="login-header">Log in</h2>
             <form action='?/login/check' method="POST" id="loginform" class="login-container">

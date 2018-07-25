@@ -8,6 +8,10 @@
         No users!
     </p>
 {% else %}
+            <div class="error_container" style="margin-top: 0px;">
+                    <span class="error_message"></span>
+                    <button class="error_button"><i class="fa fa-times"></i></button>
+            </div>
             <table>
                 <thead class="panel_dashboard_categories">
                 <tr>
@@ -32,6 +36,7 @@
                         <form action="?/users/makeAdmin" method="POST" class="admins_delete_link">
                             <input type="hidden" name="id" value="{{user.id}}">
                             <input type="hidden" name="login" value="{{user.login}}">
+                            <input type="hidden" name="email" value="{{user.email}}">
                             <span class="fa fa-user-plus"></span> 
                             <input type="submit" name="makeadmin" value="Make admin" class="users_button_make_admin">	
                         </form>

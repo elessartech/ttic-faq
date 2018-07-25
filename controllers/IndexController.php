@@ -4,22 +4,16 @@
 
 class IndexController 
 {
-
-	const DEVELOPER_EMAIL = 'maksim.ilmast@yandex.com';
-	const HEADER = 'From: ';
-	const DEFAULT_MESSAGE = 'You have received an email from ';
-
-	public $model = null;
 	public function __construct($db, $twig)
 	{
-		include_once 'models/IndexModel.php';
-		$this->model = new IndexModel($db);
+		include_once 'models/CategoriesModel.php';
+		$this->model = new CategoriesModel($db);
 		$this->twig = $twig;
 	}
 
 	public function IndexAction() 
 	{
-		$categories = $this->model->getCategories();
+		$categories = $this->model->getQuestionCategories();
 		foreach ($categories as $category)
 		{
 			$array[$category['category']]=$this->model->getQuestionsByCat($category['category']);

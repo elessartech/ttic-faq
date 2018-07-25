@@ -3,32 +3,40 @@
 	<title>User Panel</title>
 {% endblock %}
 {% block child %}
-    <div class="settings_main">
-        <h1>Profile</h1>
-    </div>
-
-                <div class="settings_container">
+                <div class="error_container" style="margin-top: 0px;">
+                    <span class="error_message"></span>
+                    <button class="error_button"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="settings_main">
+                    <h1>Settings</h1>
+                </div>
+                <table>
+                <thead class="panel_dashboard_categories">
+                <tr>
+                        <td>Username</td>
+                        <td>Email</td>
+                        <td>Password</td>
+                </tr>
+                </thead>
+                <tbody class="panel_dashboard_cell">
                 {% for user in user_info %}
-                    <div class="settings_cell">
+                    <td>
                         <form action="?/settings/changeUsername" method="POST">
                             <input type="hidden" name="id" value="{{user.id}}">
-                            <h2 class="settings_header">Username: </h2>
                             <p><input type="text" value="{{user.login}}" name="login" class="settings_text"></p>
                             <button type="submit" name="changeusername" class="settings_input">Change</button>
                         </form>
-                        </div>
-                        <div class="settings_cell">
+                    </td>
+                    <td>
                         <form action="?/settings/changeEmail" method="POST">
                             <input type="hidden" name="id" value="{{user.id}}">
-                            <h2 class="settings_header">Email: </h2>
                             <p><input type="email" name="email" value="{{user.email}}" class="settings_text"></p>
                             <button type="submit" name="changeemail" class="settings_input">Change</button>
                         </form>
-                        </div>
-                        <div class="settings_cell">
+                    </td>
+                    <td>
                         <form action="?/settings/changePassword" method="POST">
                                 <input type="hidden" name="id" value="{{user.id}}">
-                                <h2 class="settings_header">Password: </h2>
                                 <div>
                                 <input type="password" name="old_pass" placeholder="Previous Password" class="old_pass">
                                 </div>
@@ -40,7 +48,8 @@
                                 </div>
                                 <input type="submit" name="changepassword" value="Change" class="changepass_submit">	
                         </form>
-                    </div>
+                    </td>
                     {% endfor %}
-                </div>
+                </tbody>
+        </table>
 {% endblock %}

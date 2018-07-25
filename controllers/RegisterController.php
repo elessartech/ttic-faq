@@ -33,7 +33,7 @@ class RegisterController
                         {
                             echo("
                                 <script>
-                                    var errorTag = document.querySelector('#error_message');
+                                    var errorTag = document.querySelector('.error_message');
                                     errorTag.innerHTML = 'This user alredy exists.'; 
                                 </script>
                             ");
@@ -49,7 +49,7 @@ class RegisterController
                     {
                         echo("
                             <script>
-                                var errorTag = document.querySelector('#error_message');
+                                var errorTag = document.querySelector('.error_message');
                                 errorTag.innerHTML = 'Passwords do not match.'; 
                             </script>
                         ");
@@ -59,7 +59,7 @@ class RegisterController
                 {
                     echo("
                         <script>
-                            var errorTag = document.querySelector('#error_message');
+                            var errorTag = document.querySelector('.error_message');
                             errorTag.innerHTML = 'Please, fill all inputs properly.'; 
                         </script>
                     ");

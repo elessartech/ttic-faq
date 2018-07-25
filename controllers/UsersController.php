@@ -51,7 +51,7 @@ class UsersController
         {
             if (isset($_POST['changepassword']))
             {
-                if (isset($_POST['id']) && isset($_POST['old_pass']) && isset($_POST['new_pass']) && isset($_POST['confirm_pass'])) 
+                if (isset($_POST['id']) && !empty($_POST['old_pass']) && !empty($_POST['new_pass']) && !empty($_POST['confirm_pass'])) 
                 {
                     $id = $_POST['id'];
                     $old_pass = md5(trim(strip_tags($_POST['old_pass'])));
@@ -62,6 +62,24 @@ class UsersController
                         $this->model->changePassword($id, $old_pass, $new_pass);
                         echo("<script>location.href = '?/users';</script>");
                     }
+                    else 
+                    {
+                        echo("
+                            <script>
+                                var errorTag = document.querySelector('.error_message');
+                                errorTag.innerHTML = 'Passwords do not match.'; 
+                            </script>
+                        ");
+                    }
+                }
+                else 
+                {
+                    echo("
+                        <script>
+                            var errorTag = document.querySelector('.error_message');
+                            errorTag.innerHTML = 'Please, fill all inputs properly.'; 
+                        </script>
+                    ");
                 }
             }
         }   

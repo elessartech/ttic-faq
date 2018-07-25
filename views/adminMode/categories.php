@@ -8,6 +8,10 @@
         No categories!
     </p>
 {% else %}
+            <div class="error_container" style="margin-top: 0px;">
+                <span class="error_message"></span>
+                <button class="error_button"><i class="fa fa-times"></i></button>
+            </div>
             <form class="add_categories_container" method="POST" action="?/categories/addCategory">
                 <input type="text" name="new_category" placeholder="Add category" class="add_categories_input">
                 <input type="submit" name="new_category_submit" value="Add" class="add_categories_submit">
@@ -29,12 +33,12 @@
                     </td>
                     <td>
                     <form action="?/categories/changeTitle" method="POST">
-									<input type="hidden" name="id" value="{{category.id}}">
-									<div>
-										<input type="text" name="new_title" placeholder="New category name" class="new_pass">
-									</div>
-									    <input type="submit" name="changepassword" value="Change" class="changepass_submit">	
-								</form>
+                        <input type="hidden" name="id" value="{{category.id}}">
+                            <div>
+                                <input type="text" name="new_title" placeholder="New category name" class="new_pass">
+                            </div>
+					    <input type="submit" name="changepassword" value="Change" class="changepass_submit">	
+					</form>
                     </td>
                 </tr>
                 {% endfor %}

@@ -1,7 +1,7 @@
 // review error message
-var errorContainer = $("#error_container"),
-    errorButton = $('#error_button'),
-    errorMessage = $('#error_message');
+var errorContainer = $(".error_container"),
+    errorButton = $('.error_button'),
+    errorMessage = $('.error_message');
 
 $(function(){
     errorButton.click(function(){

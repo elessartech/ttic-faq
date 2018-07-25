@@ -3,6 +3,10 @@
 	<title>User Panel</title>
 {% endblock %}
 {% block child %}
+    <div class="error_container" style="margin-top: 0px;">
+        <span class="error_message"></span>
+        <button class="error_button"><i class="fa fa-times"></i></button>
+    </div>
     <div class="ask_question">
             <h2 class="question-header">Ask a Question</h2>
             <form action='?/askQuestion/add' method="POST" class="question-container">

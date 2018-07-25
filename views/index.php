@@ -19,13 +19,17 @@
 <div class="main_block_nav_container">
 	<h1 class="main_title"><a href="/faq-service">TTIC FAQ</a></h1>
 	<nav>
-		<ul class="main_menu">
+	<ul class="main_menu">
 			{% if session_admin %}
-			<li><a href="?/panel"> <i style="color: #fff; margin-right: 7px;" class="fa fa-user"></i>Admin Panel</a></li>
-			<li><a href="?/login/logout"> <i style="color: #fff; margin-right: 7px;" class="fa fa-sign-out"></i>Log Out</a></li>
+			<li><a href="?/panel">Admin Panel</a></li>
+			<li><a href="?/about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+			<li><a href="?/login/logout">Log Out</a></li>
 			{% elseif session_user %}
-			<li><a href="?/panel"><i style="color: #fff; margin-right: 7px;" class="fa fa-user"></i>User Panel</a></li>
-			<li><a href="?/login/logout"> <i style="color: #fff; margin-right: 7px;" class="fa fa-sign-out"></i>Log Out</a></li>
+			<li><a href="?/panel"></i>User Panel</a></li>
+			<li><a href="?/about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+			<li><a href="?/login/logout">Log Out</a></li>
 			{% else %}
 			<li><a href="/faq-service/">Home</a></li>
             <li><a href="?/about">About</a></li>
@@ -82,10 +86,22 @@
 			<li>+358 46 9421660</li>
 		</ul>
 		<ul class="footer_menu">
+			{% if session_admin %}
+			<li><a href="?/panel">Admin Panel</a></li>
+			<li><a href="?/about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+			<li><a href="?/login/logout">Log Out</a></li>
+			{% elseif session_user %}
+			<li><a href="?/panel"></i>User Panel</a></li>
+			<li><a href="?/about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+			<li><a href="?/login/logout">Log Out</a></li>
+			{% else %}
 			<li><a href="/faq-service/">Home</a></li>
             <li><a href="?/about">About</a></li>
 			<li><a href="?/login">Log In</a></li>
 			<li><a href="#contact">Contact</a></li>
+			{% endif %}
 		</ul>
 	</div>
 </section>

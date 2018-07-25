@@ -92,4 +92,22 @@ class UsersModel
             return false;
         }
     }
+
+    public function findUsername($login)
+    {
+        $sth = $this->db->prepare("SELECT id FROM users WHERE login=?");
+        $sth->bindValue(1, $login, PDO::PARAM_STR);
+        $sth->execute();
+        $result = $sth->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function findEmail($email)
+    {
+        $sth = $this->db->prepare("SELECT id FROM users WHERE email=?");
+        $sth->bindValue(1, $email, PDO::PARAM_STR);
+        $sth->execute();
+        $result = $sth->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
