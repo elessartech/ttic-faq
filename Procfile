@@ -1,1 +1,1 @@
-web: php composer.phar install
+web: php composer install
