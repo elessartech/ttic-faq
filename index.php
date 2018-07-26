@@ -8,7 +8,7 @@
 
 	
     
-    $config = include 'config/dbdata.php';
+    $config = include 'config/dbdata(dopler).php';
     $loader = new Twig_Loader_Filesystem('views');
 	$twig = new Twig_Environment($loader, array('cache' => false,));
     

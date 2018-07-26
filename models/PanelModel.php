@@ -16,8 +16,7 @@ class PanelModel
         $query = "SELECT questions.id, questions.question, questions.author,
         questions.email, questions.answer, questions.category_id,
         questions.visibility, questions.date_added, categories.category 
-        FROM questions INNER JOIN categories ON questions.category_id = categories.id
-        WHERE questions.blocked = 0";
+        FROM questions INNER JOIN categories ON questions.category_id = categories.id";
         $sth = $this->db->prepare($query);
         $sth->execute(); 
         return $sth->fetchAll(PDO::FETCH_ASSOC);
