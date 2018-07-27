@@ -12,9 +12,9 @@ class Router {
         if (count($url) > 2) 
         {
             $route['index'] = $url[0];
-            $route['controller'] = $url[2];
-            $route['action'] = $url[3];
-            $route['id'] = $url[4];
+            $route['controller'] = $url[3];
+            $route['action'] = $url[4];
+            $route['id'] = $url[5];
         }
 
         $controllerName = ucfirst($route['controller']);
