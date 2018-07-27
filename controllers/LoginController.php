@@ -59,7 +59,7 @@ class LoginController
     public function LoginLogout() 
     {
         session_destroy();
-        header("Location:/faq-service/");
+        header("Location:/");
     }
 
 
