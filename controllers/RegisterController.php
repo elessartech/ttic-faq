@@ -42,7 +42,7 @@ class RegisterController
                         {
                             $this->model->registerUser($email, $login, $pass);
                             $_SESSION['user'] = $login;
-                            header("Location:/faq-service/?/panel");
+                            header("Location:?/panel");
                         }
                     }
                     else 

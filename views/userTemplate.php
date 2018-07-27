@@ -17,7 +17,7 @@
 <body>
     <header>
     <div class="main_block_nav_container">
-        <h1 class="main_title"><a href="/faq-service/">TTIC FAQ</a></h1>
+        <h1 class="main_title"><a href="/">TTIC FAQ</a></h1>
     </div>
     </header>
     <div class="panel_container">

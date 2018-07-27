@@ -31,7 +31,7 @@ class LoginController
                     if ($this->model->findUser($login, $pass))
                     {
                         $_SESSION['user'] = $login;
-                        header("Location:/faq-service/?/panel");
+                        header("Location:?/panel");
                     }
                     else
                     {

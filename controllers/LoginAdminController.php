@@ -29,7 +29,7 @@ class LoginAdminController
                     if ($this->model->findAdmin($login, $pass))
                     {
                         $_SESSION['admin'] = $login;
-                        header("Location:/faq-service/?/panel");
+                        header("Location:?/panel");
                     }
                     else
                     {

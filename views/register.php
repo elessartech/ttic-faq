@@ -18,10 +18,10 @@
         <h1 class="main_title"><a href="/faq-service/">TTIC FAQ</a></h1>
         <nav>
             <ul class="main_menu">
-            <li><a href="/faq-service/">Home</a></li>
-            <li><a href="?/about">About</a></li>
-			<li><a href="?/login">Log In</a></li>
-			<li><a href="#contact">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="?/about">About</a></li>
+                <li><a href="?/login">Log In</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -60,7 +60,7 @@
 			<li>+358 46 9421660</li>
 		</ul>
 		<ul class="footer_menu">
-            <li><a href="/faq-service/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="?/about">About</a></li>
 			<li><a href="?/login">Log In</a></li>
 			<li><a href="#contact">Contact</a></li>
