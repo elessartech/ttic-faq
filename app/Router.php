@@ -11,10 +11,10 @@ class Router {
         $route = array('index' => Router::DEFAULT_OPTION, 'controller' => Router::DEFAULT_OPTION, 'action' => Router::DEFAULT_ACTION, 'id'=>null);
         if (count($url) > 2) 
         {
-            $route['index'] = $url[1];
-            $route['controller'] = $url[2];
-            $route['action'] = $url[3];
-            $route['id'] = $url[4];
+            $route['index'] = $url[0];
+            $route['controller'] = $url[1];
+            $route['action'] = $url[2];
+            $route['id'] = $url[3];
         }
 
         $controllerName = ucfirst($route['controller']);
