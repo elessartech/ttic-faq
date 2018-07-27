@@ -1,1 +1,0 @@
-web: php composer.json install
