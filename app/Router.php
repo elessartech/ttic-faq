@@ -19,7 +19,7 @@ class Router {
         elseif (count($url) > 1)
         {
             $route['index'] = $url[0];
-            $route['controller'] = $url[1];
+            $route['controller'] = Router::DEFAULT_OPTION;
         }
 
         $controllerName = ucfirst($route['controller']);
