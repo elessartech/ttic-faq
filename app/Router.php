@@ -19,6 +19,7 @@ class Router {
         else 
         {
             $route['index'] = $url[0];
+            $route['controller'] = $url[1];
         }
 
         $controllerName = ucfirst($route['controller']);
