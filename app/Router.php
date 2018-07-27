@@ -16,6 +16,11 @@ class Router {
             $route['action'] = $url[2];
             $route['id'] = $url[3];
         }
+        else if (count($url) > 1)
+        {
+            $route['index'] = $url[0];
+            $route['controller'] = $url[1];
+        }
         else
         {
             $route['index'] = $url[0];
