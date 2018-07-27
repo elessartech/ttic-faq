@@ -2,5 +2,5 @@
 config/dbdata.php
 
 # javascript libraries
-public/js/lib/jquery-2.1.1.js
-public/js/lib/modernizr.js
+#public/js/lib/jquery-2.1.1.js
+#public/js/lib/modernizr.js
