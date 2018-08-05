@@ -48,7 +48,7 @@ class Router {
         
         if ($controllerName == 'EditQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET' || $controllerName == 'AnswerQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET' || $controllerName == 'EditSuggestion' && $_SERVER['REQUEST_METHOD'] == 'GET') 
         {
-            $route['id'] = $url[3];
+            $route['id'] = $url[2];
             $controllerObject->$actionName($route['id']);
             return false;
         } 
