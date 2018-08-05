@@ -16,6 +16,6 @@
 
 ***
 
-You can find the app here: **https://ttic-faq.herokuapp.com/**
+The app can be found at **https://ttic-faq.herokuapp.com/**
 
 ***
