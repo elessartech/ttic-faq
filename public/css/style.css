@@ -880,7 +880,7 @@ header h1 {
 }
 .panel_menu ul li:first-child {
   cursor: default;
-  margin-bottom: 2em;
+  margin-top: 4em;
   font-size: 2rem;
 }
 .panel_menu ul li:last-child {
@@ -893,6 +893,10 @@ header h1 {
 }
 .panel_menu ul li a:hover {
   color: #55a027;
+}
+
+.panel_dashboard {
+  margin-top: 4em;
 }
 
 .panel_dashboard table {

@@ -22,7 +22,7 @@
 		<a href="?/about">About</a>
 		<a href="#contact">Contact</a>
 		<a href="?/login/logout">Log Out</a>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
 			<i class="fa fa-bars"></i>
 		</a>
 		{% elseif session_user %}
@@ -30,17 +30,19 @@
 		<a href="?/about">About</a>
 		<a href="#contact">Contact</a>
 		<a href="?/login/logout">Log Out</a>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
 			<i class="fa fa-bars"></i>
 		</a>
 		{% else %}
-		<a href="/">Home</a>
-		<a href="?/about">About</a>
-		<a href="?/login">Log In</a>
-		<a href="#contact">Contact</a>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		</a>
+		<div class="topnav_container">
+			<a href="/">Home</a>
+			<a href="?/about">About</a>
+			<a href="?/login">Log In</a>
+			<a href="#contact">Contact</a>
+			<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 	{% endif %}
 </div>
     <main>
