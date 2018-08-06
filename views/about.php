@@ -45,21 +45,14 @@
 		</div>
 	{% endif %}
 </div>
-    <main>
-        <div class="main_block_descr_container" >
-            <div class="main_block_descr">
-                <h2 class="main_descr_title">Find your answers</h2>
-                <h3 class="main_descr_side_title">Simple to use and hard to overestimate</h3>
-                <p class="main_descr_text">Summer project which was made with purpose to help people incresing their knowledges and broadening their minds in the ict(it) field.</p>
-            </div>
-            <div class="main_block_img">
-                <img 
-                    src=""
-                    alt=""
-                />
-            </div>
-        </div>
-    </main>
+
+    <section class="about_main">
+        <h1 class="about_main_header">Find your answers</h1>
+        <h2 class="about_main_preheader">Simple to use and hard to overestimate. Summer project which was made with purpose to help people incresing their knowledges and broadening their minds in the ict(it) field.</h2>
+        <img src="public/img/first.jpg" width="640px" height="425px" class="about_main_img">
+    </section>
+
+
     <section class="features_section" id="features_section">
           <div class="features_header_section">
           <h2>TTIC FAQ features</h2>

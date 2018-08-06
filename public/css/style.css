@@ -126,23 +126,19 @@ a {
   }
 }
 
+/* About main section */ 
 
-/* About section */
-.main_block_descr_container {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  margin-bottom:250px;
+.about_main {
+  padding-top: 4em;
+  width: 63%;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.main_block_descr {
-  margin: 70px 0em 0em 30em;
-}
-
-.main_descr_title {
+.about_main_header {
   font-size: 3em;
   font-weight: 700;
-  color: #010101;
+  color: #42464b;
   margin-bottom: 30px;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 45px;
@@ -150,62 +146,27 @@ a {
   margin-top: 24px;
 }
 
-.main_descr_side_title {
-  font-size: 2rem;
+.about_main_preheader {
+  font-size: 1.5rem;
   font-weight: 400;
   color: #313841;
   margin-bottom: 30px;
-  line-height: 40px;
+  line-height: 30px;
   margin-top: 24px;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
-.main_descr_text {
-  color: #555555;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: 0;
-  margin-bottom: 16px;
-}
-
-.main_block_img img{
-  background: url(../img/first.jpg) center center no-repeat;
+.about_main_img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   box-shadow: 1px 5.732px 50px #010101;
-  min-width: 640px;
-  min-height: 425px;
-  display: block;
-  position: relative;
-  left: 20em;
-  top: 10em;
 }
 
 
-header {
-  position: relative;
-  height: 180px;
-  line-height: 180px;
-  text-align: center;
-  background-color: #55a027;
-}
-header h1 {
-  color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 20px;
-  font-size: 1.25rem;
-}
-@media only screen and (min-width: 1024px) {
-  header {
-    height: 240px;
-    line-height: 240px;
-  }
-  header h1 {
-    font-size: 36px;
-    font-size: 2.25rem;
-    font-weight: 300;
-  }
-}
+
+
+/* cd section */
 
 .cd-faq {
   width: 90%;
@@ -1206,6 +1167,12 @@ header h1 {
   margin-bottom: 50px;
 }
 
+@media only screen and (min-width: 1100px) {
+  .prefooter_header_section p {
+    padding: 0px 20em;
+  }
+}
+
 .prefooter_form {
   display: block;
 }
@@ -1319,7 +1286,7 @@ header h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .footer_menu {
     display: none;
   }
