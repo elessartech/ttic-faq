@@ -15,31 +15,38 @@
 	<title>Main</title>
 </head>
 <body>
-<header>
 <div class="main_block_nav_container">
 	<h1 class="main_title"><a href="/">TTIC FAQ</a></h1>
-	<nav>
-	<ul class="main_menu">
-			{% if session_admin %}
-			<li><a href="?/panel">Admin Panel</a></li>
-			<li><a href="?/about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-			<li><a href="?/login/logout">Log Out</a></li>
-			{% elseif session_user %}
-			<li><a href="?/panel"></i>User Panel</a></li>
-			<li><a href="?/about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-			<li><a href="?/login/logout">Log Out</a></li>
-			{% else %}
-			<li><a href="/">Home</a></li>
-            <li><a href="?/about">About</a></li>
-			<li><a href="?/login">Log In</a></li>
-			<li><a href="#contact">Contact</a></li>
-			{% endif %}
-		</ul>
-	</nav>
 </div>
-</header>
+<div class="topnav" id="myTopnav">
+  	{% if session_admin %}
+		<a href="?/panel">Admin Panel</a>
+		<a href="?/about">About</a>
+		<a href="#contact">Contact</a>
+		<a href="?/login/logout">Log Out</a>
+		<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
+			<i class="fa fa-bars"></i>
+		</a>
+		{% elseif session_user %}
+		<a href="?/panel"></i>User Panel</a>
+		<a href="?/about">About</a>
+		<a href="#contact">Contact</a>
+		<a href="?/login/logout">Log Out</a>
+		<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
+			<i class="fa fa-bars"></i>
+		</a>
+		{% else %}
+		<div class="topnav_container">
+			<a href="/">Home</a>
+			<a href="?/about">About</a>
+			<a href="?/login">Log In</a>
+			<a href="#contact">Contact</a>
+			<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	{% endif %}
+</div>
 
 <section class="cd-faq">
 		<ul class="cd-faq-categories">
@@ -105,7 +112,6 @@
 		</ul>
 	</div>
 </section>
-
 <script src="public/js/lib/jquery-2.1.1.js"></script>
 <script src="public/js/app.js"></script> <!-- Resource jQuery -->
 <script src="public/js/scroll.js"></script> <!-- Resource jQuery -->

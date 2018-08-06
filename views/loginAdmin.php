@@ -13,19 +13,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
 </head>
 <body>
-    <header>
-    <div class="main_block_nav_container">
-        <h1 class="main_title"><a href="/faq-service/">TTIC FAQ</a></h1>
-        <nav>
-            <ul class="main_menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="?/about">About</a></li>
-                <li><a href="?/login">Log In</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<div class="main_block_nav_container">
+	<h1 class="main_title"><a href="/">TTIC FAQ</a></h1>
+</div>
+    <div class="topnav" id="myTopnav">
+		<a href="/">Home</a>
+		<a href="?/about">About</a>
+		<a href="?/login">Log In</a>
+		<a href="#contact">Contact</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
     </div>
-    </header>
     <div class="login">
         <div class="error_container">
             <span class="error_message"></span>

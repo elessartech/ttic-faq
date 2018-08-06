@@ -12,6 +12,7 @@ class Router {
         $route = array('index' => Router::DEFAULT_OPTION, 'controller' => Router::DEFAULT_OPTION, 'action' => Router::DEFAULT_ACTION, 'id'=>null);
         if (count($url) > 2) 
         {
+            // for local deployment: 1, 2, 3, 4 and for real deployment we use: 0, 1, 2, 3
             $route['index'] = $url[0];
             $route['controller'] = $url[1];
             $route['action'] = $url[2];
@@ -48,6 +49,7 @@ class Router {
         
         if ($controllerName == 'EditQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET' || $controllerName == 'AnswerQuestion' && $_SERVER['REQUEST_METHOD'] == 'GET' || $controllerName == 'EditSuggestion' && $_SERVER['REQUEST_METHOD'] == 'GET') 
         {
+            // for local deployment: 3 and for real deployment we use: 2
             $route['id'] = $url[2];
             $controllerObject->$actionName($route['id']);
             return false;
