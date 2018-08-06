@@ -17,22 +17,26 @@
 	<h1 class="main_title"><a href="/">TTIC FAQ</a></h1>
 </div>
 <div class="topnav" id="myTopnav">
-  	{% if session_admin %}
-		<a href="?/panel">Admin Panel</a>
-		<a href="?/about">About</a>
-		<a href="#contact">Contact</a>
-		<a href="?/login/logout">Log Out</a>
-		<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
-			<i class="fa fa-bars"></i>
-		</a>
+{% if session_admin %}
+	  	<div class="topnav_container">
+			<a href="/">Home</a>
+			<a href="?/about">About</a>
+			<a href="?/login">Log In</a>
+			<a href="#contact">Contact</a>
+			<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 		{% elseif session_user %}
-		<a href="?/panel"></i>User Panel</a>
-		<a href="?/about">About</a>
-		<a href="#contact">Contact</a>
-		<a href="?/login/logout">Log Out</a>
-		<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
-			<i class="fa fa-bars"></i>
-		</a>
+		<div class="topnav_container">
+			<a href="/">Home</a>
+			<a href="?/about">About</a>
+			<a href="?/login">Log In</a>
+			<a href="#contact">Contact</a>
+			<a href="javascript:void(0);" class="icon" onclick="makeResponsive()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 		{% else %}
 		<div class="topnav_container">
 			<a href="/">Home</a>
