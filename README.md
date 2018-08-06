@@ -10,12 +10,11 @@
 
 ### Setup Instruction:
 1. Clone the repository or download the repository as a zip.
-2. Modify the file config/dbdata.php: delete "(dopler)" from title and enter your mysql password as a value to key "pass".
-3. Download all the dependencies using Composer.
-4. Import database dump (faq.sql).
+2. Download all the dependencies using Composer.
+3. If necessary, import database dump (faq.sql).
 
 ***
 
-You can find the app here: **https://ttic-faq.herokuapp.com/**
+The app can be found at **https://ttic-faq.herokuapp.com/**
 
 ***
