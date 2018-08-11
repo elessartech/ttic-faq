@@ -30,7 +30,7 @@
                     <td><p>{{user.login}}</p></td>
                     <td><p>{{user.email}}</p></td>
                     <td>
-                    <p><a href="?/adminAdmins/deleteUser/{{user.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
+                    <p><a href="?/users/deleteUser/{{user.id}}" class="admins_delete_link"><span class="fa fa-trash"></span> Delete</a></p>
                     </td>
                     <td>
                         <form action="?/users/makeAdmin" method="POST" class="admins_delete_link">

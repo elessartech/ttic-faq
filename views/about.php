@@ -68,14 +68,14 @@
             <div class="features_icon"></div>
               <h2>Problem solving</h2>
               <p>
-              Great source of new knowledges and also can be used for rediscovering the old ones
+              Great source of new knowledges
               </p>
             </div>
             <div class="features_item">
             <div class="features_icon"></div>
               <h2>Entertainment</h2>
               <p>
-                We hope you will enjoy the process of gaining information
+                You will enjoy the process of gaining information
               </p>
             </div>
             <div class="features_item">
@@ -91,7 +91,7 @@
             <div class="features_icon"></div>
               <h2>Comfortability</h2>
               <p>
-              Choose the position you like to sit and find your answers peacefully
+              Easy to monipulate
               </p>
             </div>
             <div class="features_item">
