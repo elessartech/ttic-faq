@@ -91,7 +91,7 @@
             <div class="features_icon"></div>
               <h2>Comfortability</h2>
               <p>
-              Easy to monipulate
+              Easy to manipulate
               </p>
             </div>
             <div class="features_item">
