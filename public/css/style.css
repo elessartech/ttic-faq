@@ -651,6 +651,10 @@ a {
 }
 
 @media only screen and (max-width: 1050px) {
+  .features_container {
+    padding-left: 8em;
+  }
+
   .features_item {
     width: 100%;
   }
